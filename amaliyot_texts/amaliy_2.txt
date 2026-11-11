@@ -1,0 +1,125 @@
+
+=== PAGE 1 ===
+3.1.1 Mustaqil ishlash uchun misol va masalalar
+
+1. O‘rniga qo'yishlarning inversiyalar sonini aniqlang:
+
+12345 12345
+
+9 (53 ). 0 (4 5
+6 5
+
+3 2
+
+9 (0
+
+2. Quyidagi o‘rin almashtirishlarning inversiyalar sonini toping:
+
+8) 1,3,5,7,...,2n—1,2,4,6,8,...2n,
+
+b) 2,4,6,8,...2n,1,3,5,7,...,2n — 1,
+
+©) 1,4,7,...,3n—2,2,5,8,...,3,6,9,...,3n,
+
+d) 3,6,9,...,3n,2,5,8,...,3n — 1,1,4,7,...,3n— 2,
+
+© 2,58,...,3n—1,3,6,9,...,3n,1,4,7,...,3n — 2,
+£)2,5,8,...,3n—1,1,4,7,...,3n — 2,3,6,9,...,3n,
+
+g 1,5,...,4n —3,2,6,...,4n —2,3,7,...,4n —1,4,8,... 4n,
+TM) 1,5,...,4n — 3,3,7,...,4n — 1,2,6,...,4n — 2,4,8,...,4n.
+
+3. Fagat 1 va k ning o‘rnini almashtiruvchi o‘rin almashtirishning in-
+versiyalar soni nimaga teng?
+
+4. Qanday o‘rin almashtirishlarning inversiyalar soni eng katta bo‘ladi?
+
+5. Agar ( L 2p n ) o‘rniga qo‘yishning inversiyalar soni k ga
+a as ... ap
+
+teng bo'lsa, Lt .2 n ) o'rniga qo‘yishning inversiyalar
+an ap—y ... QQ
+sonini toping.
+
+6. O‘rniga qo'yishlarni ko‘paytiring:
+
+5) 1234) (1234
+4132 3241)"
+
+CkaHupoBaHo ¢ CamScanner
+
+=== PAGE 2 ===
+):
+
+123456
+241563
+
+123456 (
+364521
+
+9 (
+7. Hisoblang:
+
+)
+12345678
+47851326
+
+toping.
+
+12345)
+$a519)"
+123456
+341562
+
+(
+of
+
+)
+)
+
+a
+b
+
+I
+
+12345678910
+3541710269 8
+
+) o'rniga qo‘yish uchun A ni
+
+G
+
+toping.
+
+) o‘rniga qo‘yish uchun A ni
+
+1234567 8 910
+3546971108 2
+
+© A
+
+C tenglikdan X o‘rniga qo‘yishni toping, bu yerda
+
+1234567
+
+10.A-X.B
+
+”
+(
+)
+
+123456
+3127456
+
+7321654
+
+) ol
+
+).
+
+1234567
+5136479
+
+C=
+
+CkaHupoBaHo ¢ CamScanner

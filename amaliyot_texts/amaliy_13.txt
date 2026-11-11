@@ -1,0 +1,306 @@
+BOB 5. KO'PHADLAR
+
+160
+
+tengliklarni hosil qilamiz. Ya’ni
+
+6q = o 0 ,
+
+bk = abk-\ + ojt,
+
+1 < k <n—1
+
+tengliklar kelib chiqadi. Oxirgi r = abn-\ + an tenglikdan r qoldiq yoki
+f(x) ko‘phadning x = a nuqtadagi qiymati topiladi.
+Bu usul Gomer sxemasi deb atalib, quyidagicha jadval orqali ifodalanadi:
+Qq
+Oq
+
+To
+
+Qi
+
+O77______
+
+_____ O-n—1_____
+
+Q2
+
+qn-i + abn-2 On + abn-i
+
+G-i + ab$ 02 + &61
+61
+62
+
+r
+
+bn—l
+
+5.1.3-misol. f(x) = 2x5 — 3z4 + 4&2 — 5z + 7 ko‘phadni x — 3 ga
+bo‘lgandagi q(x) bo‘linma va r qoldiqni Gomer sxemasi yordamida
+toping.
+a
+3
+
+Oo
+
+Qi
+
+03
+
+O4
+
+0-5
+
+y
+
+a'i
+
+-3
+3
+61
+
+0
+9
+
+4
+31
+
+^5
+88
+b4
+
+7
+271
+r
+
+2
+
+60
+
+&3
+
+Shunday qilib, bo‘linma q(x) = 2x4 + 3z3 + 9z2 + 31rr + 88, qoldiq esa
+r = /(3) = 271 ga teng bo‘ldi.
+5.1.2
+
+Mustaqil ishlash uchun misol va masalalar
+
+1. f(x) ko‘phadni g(x) ko‘phadga bo’lgandagi qoldiqni toping:
+
+a) f(x) = 2x4 — 3x3 + 4x2 — 5x + 6, g(x) = x2 — 3x + 1,
+
+b) f(x) = x3 - 3x2 - x - 1,
+
+g(x) = 3z2 — 2x + 1.
+
+2. f(x) ko‘phad g(x) ko‘phadga qoldiqsiz bo‘linadigan shartlarni toping.
+
+a) f(x) = x3 + px + g,
+
+g(x) = x2 + mx — 1,
+
+b) f(x) = x‘‘4 + px2 + g,
+
+g(x) = x2 + mx + 1.
+
+5.1. KO'PHADLAR VA ULAR USTIDA AMALLAR
+
+161
+
+3. Gorner sxemasi yordamida f(x) ko'phadni g(x) ko‘phadga
+bo‘lgandagi qoldiqni toping:
+a) /(®) = x4 —2x3 + 4z2 — 6x + 8, g(x)
+
+= x — 1,
+
+b) f(x) = x4 —2z3 — 3x2 — 4x + 1, g(x)
+
+= x + 1,
+
+g(x) = x + 3,
+
+c) f(x) = 2rr5 — 5z3 — 8z,
+
+d) /(^) = 3z5 + x4 — 19z2 — 13rc — 10,
+
+g(x) = x + 2,
+
+e) f(x) = x4 —8x3 + 24x2 — 50z + 90,
+
+g(x) = x — 2,
+
+f) f(x) = x5 + 7x4 + 16z3 + 8z2 — 16z — 16, g(x) = x + 2,
+g) f(x) = 4z3 + x2,
+g(x) = x + 1 + i,
+h) f(x) = x3 — x2 — x,
+
+g(x) = x — 1 + 2i.
+
+4. Gorner sxemasi yordamida f(x) ko‘phadning x0 nuqtadagi qiymatini
+toping:
+
+a) /(^) = x.44 — 3x3 + 6x2 — lOz + 16,
+
+3J0 = 4,
+
+b) f(x) = x4 — 3x3 — 10z2 + 2x + 5,
+
+xq = -2,
+
+c) f(x) = x3 — 6x4 + 2z3 + 36x2 — 27rr — 54,
+
+270 = 3,
+
+d) f(x) = x3 + (1 + 2i)x4 — (1 + 3t)z2 + 7,
+
+rr0 = — 2 — i.
+
+5. Gorner sxemasi yordamida f(x) ko‘phadni x — xq ning darajalari
+bo‘yicha yoying:
+a) f(x) = x4 + 2z3 — 3z2 — 4x + 1,
+
+b) f(x) = x3,
+
+xq = —1,
+
+xq = 1,
+
+c) f(x) = x4 — 8z3 + 24z2 — 50x + 90,
+
+d) f(x) = x3 — 4rr3 + 6z2 — 8x + 10,
+
+z0 =2,
+xq = 2,
+
+e) f(x) = x4 + 2ix3 — (1 + i)x2 — 3x + 7 + i, xq = —i,
+
+f) f(x) = x4 — 3ix3 — 4x2 + 5ix — 1,
+
+xq = 1 +2i.
+
+BOB 5. KO'PHADLAR
+
+162
+
+6. Gorner sxemasi yordamida f(x) ko‘phadni x ning darajalari bo‘yicha
+yoying:
+a) f(x 4- 3), bu yerda f(x) = x4 — x3 + 1,
+b) f(x — 2), bu yerda f(x) = x4 — 5rr2 + x — 3,
+
+c) (x - 2)4 + 4(x - 2)3 + 6(x - 2)2 + 10(x -2) + 20,
+d) (x + l)5 - 3(x + l)4 + 4(x + l)2 +6(x + 1)
+
+- 8.
+
+7. Berilgan ko‘phad hosilasining xq nuqtadagi qiymatini toping
+a) f(x) = x5 — 4x3 + 6z2 — Sx + 10,
+
+x0 = 2,
+
+b) f(x) = x3 + 2z4 + 2x2 + 4x — 7,
+c) f(x) = x4 + (2 + i)x3 — 2x2 + 7 — 2z,
+
+= -3,
+z0 = i,
+
+d) f(x) = x4 — 3ix3 — 4x2 + 5ix — 1,
+
+xq = 1 + 2i.
+
+8. Quyidagi ko‘phadlar uchun xq soni nechchi karrali ildiz ekanligini
+aniqlang:
+a) f(x) = x3 — 5x4 + 7x3 — 2x2 + 4x — 8,
+
+xq = 2,
+
+b) f(x) = x3 + 7x4 + 16x3 + 8z2 — 16x — 16,
+c) f(x) = 3x5 + 2x4 + x3 — lOx — 8,
+
+xq = -2,
+
+d) }(x) = x3- 6x4 + 2x3 + 36z2 - 27x - 54,
+
+xq = 3.
+
+xq = -1,
+
+9. 3;0 = —1 soni f(x) = x3 — ax2 — ax + 1 ko‘phadning kamida ikki
+karrali ildizi bo‘lishi uchun a parametr qanday qiymatlarni qabul
+qilishi kerak.
+
+10. Agar Ax4 + Bx3 + 1 uchhad (x — l)2 ko‘phadga qoldiqsiz bo'linsa,
+A va B koeffitsientlarni aniqlang.
+11. Agar Axn+1 + Bxn +1 uchhad (x — l)2 ko‘phadga qoldiqsiz bo‘linsa,
+A va B koeffitsientlarni aniqlang.
+12. 1 soni quyidagi ko‘phadlarning uch karrali ildizi ekanligini isbotlang:
+
+a) a;2n —
+- nx'n+1 + nx"-1 - 1,
+
+163
+
+5.2. KO'PHADLAR UCHUN YEVKLID ALGORITMI
+
+b) x2n+1 —
+- (2n +
+4- l)z
+l)rrn+1 4- (2n 4- l)zn \
+
+c) (n — 2m)x:n — nxn~m 4- nxm — (n — 2m).
+13. Quyidagi ko‘phad (x — l)5 ga bo‘linib, (x — l)6 ko‘phadga
+bo‘linmasligini ko‘rsating:
+~2n+l
+
+JU
+
+n(n + l)(n4-2)~,n+2 | (n — l)(n + 2)(2n +l)_n+1
+2
+X
+6
+i
+
+■
+
+(n - l)(n + 2)(2n + 1)
+2
+
+X
+~
+
+‘
+i
+
+n(n+l)(n4-2) ,,n-l
+6
+
+X
+
+i
+
+X
+
+14. x5 4- ax3 4- b ko‘phad a va b parametlarning qanday qiymatlarida
+noldan farqli ikki karrali ildizga ega bo‘lishini aniqlang.
+15. x5 4- 10ax3 4- 5bx 4- c ko‘phad a, b va c parametlarning qanday qiymatlarida noldan farqli uch karrali ildizga ega bo‘lishini aniqlang.
+
+16. xn 4- axn~m 4- b ko‘phad a va b parametlarning qanday qiymatlarida
+noldan farqli ikki karrali ildizga ega bo‘lishini aniqlang.
+17. xn+axn~m+b ko‘phad noldan farqli uch karrali ildizga ega emasligini
+isbotlang.
+
+5.2
+
+Ko‘phadlar uchun Yevklid algoritmi
+
+Bizga f(x) va g(x) ko‘phadlar berilgan bo‘lsin.
+5.2.1-ta’rif. Agar<p(x) ko‘phad uchun <p(x)\f(x\va ip(x)\g(x) o'rinli
+bo‘lsa, u holda <p(x) ko‘phad f(x) va g(x) ko‘phadlaming umumiy
+bo‘luvchisi deyiladi.
+
+Agar <p(x) ko‘phad f(x) va g(x) ko‘phadlarning umumiy bo‘luvchisi
+bo‘lsa, cip(x) ko‘phad ham bu ko‘phadlarning umumiy bo‘luvchisi bo‘ladi.
+Bundan tashqari, <p(x) ko‘phadning bo‘luvchilari ham f(x) va g(x)
+ko‘phadlarning umumiy bo‘luvchilari bo‘ladi.
+
+

@@ -1,0 +1,157 @@
+BOB 2. KOMPLEKS SONLAR
+
+36
+
+2.1.2
+
+Mustaqil ishlash uchun misol va masalalar
+
+1. Quyidagi algebraik ko‘rinishda berilgan kompleks sonlarning
+yig‘indisi, ko‘paytmasi va bo‘linmasini toping:
+
+a) Zi = 2 + 3i, z2 = 1 + 2,
+b) z\ = 1 — 2i, z2 = —3 + 2i,
+c) z\ = 2 + 5i, z2 = —4 — 2,
+d) z\ = 3 — 72, z2 = 2 — 5i,
+e) z\ = 2 + 62, z2 = — 2 + 3i,
+f) z\ = 4 + 2i, z2 = — 3 — 2t,
+g) z\ = 5 + 3i, z2 = 3 + 2i,
+h) z\ = 6 - 2i, z2 = 3 - 4+
+2. Quyidagi tenglikni qanoatlantiruvchi x va y haqiqiy sonlarni toping:
+
+(1 + 2i)x + (3 - 52)2/ = 1-32.
+3. x, y, 2, t larning haqiqiy qiymatlarida tenglamalar sistemani yeching:
+f (1 +
++ (1 + 2i)y + (1 + 3i)z + (1 + 4i)t = 1 + 5i,
+\ (3 - i)x + (4 — 2i)y + (1 + i)z + 4it = 2 — i.
+4. n-butun son uchun in ni hisoblang.
+5. Ifodani soddalashtiring:
+
+(x - 1 — i)(z — 1 + i)(x + 1 + i)(x + 1 — 2).
+6. Quyidagi kvadratik tenglamalarning kompleks ildizlarini toping.
+
+a) x2 + 2 = 0,
+b) 7x2 + 1 = 0,
+c) 3x2 + 4 = 0,
+d) x2 + x + 6 = 0, e) 2x2 - 5z + 4 = 0, f) 7x2 + x + 1 = 0.
+7. Hisoblang:
+
+a) (1 + 2i)\
+
+b) (2 + i)7 + (2 -i)\
+
+c) (1 + 2i)5 - (1 - 2i)5.
+
+2.1. KOMPLEKS SONLAR VA ULAR USTIDA AMALLAR
+
+37
+
+8. Ikki kompleks .sonning ko‘paytmasi qachon faqat mavhum qismdan
+iborat bo‘lishini aniqlang.
+
+9. Amallarni bajaring.
+
+a)
+
+1 — itga
+
+b)
+
+(1 + 2i)2 — (1 — z)3
+(3 + 2i)3 — (2 + z)2 ’
+
+e>d>
+
+(1 +i)9
+
+10. n-butun haqiqiy son uchun jLtyLs ni hisoblang.
+11. Tenglamalar sistemasini yeching:
+f (3 — i)x + (4 + 2i)y = 2 + 6i,
+a)
+[ (4 + 2i)x — (2 + 3i)y = 5 + 4z.
+
+b)
+
+f (2 + i)x + (2 - i)y = 6,
+[ (3 + 2i)x + (3 - 2i)y = 8.
+
+x + yi — 2z = 10,
+c) < x — y + 2iz = 20,
+k ix + 3iy — (1 + i)z = 30.
+
+12. Agar x+yi = (s+h)n bo’lsa, x2+y2 = (s2+t2)n tenglikni isbotlang.
+13. Kompleks sonlarning kvadrat ildizlarini toping:
+
+a) x/2i,
+b) x/—8z,
+e) V-3 - 4i, f) V-11 + 601,
+j) y/4 + i +
+i) V^3i,
+
+c)
+d) V-15 + 8i,
+g) V-8 + 6i, h) V-8 - 6i,
+k)
+- ix/3, 1) ^2 - z>/i2.
+
+14. Quyidagi tenglamalarni yeching:
+
+a) x2 — (2 + i)x + (—1 + 7i) = 0,
+b) x2 — (3 — 2i)x + (5 — 5i) = 0,
+c) (2 + i)x2 - (5 - i)x + (2 - 2i) = 0,
+d) x4 - 3x2 + 4 = 0,
+e) x4 - 30x2 + 289 = 0,
+f) x4 + 2x2 - 24x + 72 = 0.
+
+i
+
+BOB 2. KOMPLEKS SONLAR
+
+38
+
+15. Quyidagi kompleks sonlarning geometrik tasvirini toping:
+
+a) z = 3 - 2i, b) z = 5 + i, c) z = — 2 + 5z, d) z = 6 — 2z,
+16. Quyidagi kompleks sonlarning trigonometrik shaklini toping:
+
+a) z = 2 — 2z,
+d) z = 2x/3 - 2i,
+
+b) z = 2 — 2\/3z, c) z = — 2 — 2\/3z,
+e) z = 2^/3 - 2i, f) z = 3 - 3z,
+
+g) z = -x/3 - 3i, h) z = 2 + V3 + i, i)z = 2 - a/3 + i.
+17. Kompleks sonlar tekisligida quyidagi shartni qanoatlantiruvchi nuqtalar to‘plamlarni tasvirlang:
+
+a) |z| = 1,
+d) argz =
+2.2
+
+c) \z - z| < 1,
+b) |z| < 2,
+e) 0 < arg z < |, f) Imz > 0.
+
+Muavr formulasi, kompleks sondan ildiz chiqarish
+
+Ushbu paragrafda trigonometrik shaklda berilgan kompleks sondan ndarajali ildiz chiqarish formulasini keltiramiz. Bizga
+z = r(cos p + i sin (p)
+ko‘rinishidagi kompleks son berilgan bo‘lsin.
+2.2.1-tasdiq (Muavr formulasi). Har qanday n e Z butun son uchun
+quyidagi tengliklar o‘rinli:
+1.
+
+zn = rn (cos np + i sin wp),
+
+(2-6)
+
+ya’ni, |zn| = |z|n, arg(zn) = nargz.
+Isbot. 2.1.1-natijada
+
+n = r2 = ... = rn = r,
+
+(p! = <p2 = •. • = <Pn = <P
+
+deb olsak, (2.6) formulaning natural sonlar uchun o‘rinli ekanligi kelib
+chiqadi.
+
+

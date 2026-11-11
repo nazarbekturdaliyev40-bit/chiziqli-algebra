@@ -1,0 +1,666 @@
+
+=== PAGE 1 ===
+4.3. BIR JINSLI TENGLAMALAR SISTEMASI. KRONEKER-KAPELLI TEOREMASI 139
+
+4.3 Bir jinsli tenglamalar sistemasi. Kroneker-Kapelli
+teoremasi
+
+Ushbu mavzuda chizigli tenglamalar sistemasini umumiy yechimini to-
+pish usulini beramiz. Dastlab, bir jinsli tenglamalar sistemasini qaraymiz.
+Bizga
+
+a2 + a2 +... + ae =0,
+21%) + a22%2 +... + QgnTn = 0,
+
+AT) + AGmaTa +... + Aman = 0
+
+bir jinsli tenglamalar sistemasi berilgan bo‘lsin. Ma'lumki, ushbu siste-
+maning matritsasini A hamda matritsaning ustunlarini vy, va, . .., v, deb
+olsak, sistemani
+
+TU + Tova +... Zp, =0
+
+yoki
+A-X=0
+
+ko'rinishlarda ham yozish mumkin, bu yerda X - noma’'lumlardan iborat
+bo‘lgan ustun vektor.
+
+4.3.1-tasdiq. Agar Z,,Zs,...,2Z; wustunlar bir jinsli chizigli
+tenglamalar sistemasining yechimi bo‘lsa, u holda ularning iztiyoriy
+chizigli kombinatsiyasi ham yechim bo ladi.
+
+Isbot. Hagigatan ham, A - Z, = 0 ekanligidan
+A-(Z1+crZa+...+aZy) =clA-Z1 +A Za+... + cA Zp =0
+kelib chiqgadi. a
+
+4.3.1-teorema. Bir jinsii chizigli tenglamalar sistemasining izti-
+yoriy yechimin —r ta chizigli erkli yechimlarning chizigli kombinat-
+siyasidan iborat bo ‘ladi, bu yerda n — noma’ lumlar soni, r = rank(A).
+
+Isbot. Sistemani
+
+Ziv) + Tove +... + Tay = 0
+
+
+=== PAGE 2 ===
+4.3. BIR JINSLI TENGLAMALAR SISTEMASI. KRONEKER-KAPELLI TEOREMASI 143
+
+4.3.1-misol. Quyidagi bir jinsli chizigli tenglamalar sistemasining
+umumiy va fundamental yechimlar sistemasini toping:
+
+Ty + 220 — x3 + 374 = 0,
+Ty + 229 + 223 — z4 = 0,
+3z; + 6zy + S5z4 = 0,
+
+4z, + 829 — 1x3 + 8z4 = 0.
+
+Yechish. Dastlab, ushbu sistema asosiy matritsasining rangini
+hisoblab olamiz:
+
+12-1 3 12-1 3 12-1 3
+12 2-1 2 00 3-4 o 00 3-4
+36 0 5 00 3-4 00 0 0
+48 —1 8) 00 3 —4 00 0 0
+
+Demak, matritsaning rangi 7 = 2 bo‘ladi. Birinchi va uchinchi ustun-
+lar chizigli erkli bo‘lib, ikkinchi va to'rtinchi ustunlar ular orqali chiziqli
+ifodalanadi. U holda z; va z3 o'zgaruvchilarni z; va z, orqali ifodalab,
+T) = —2z9 — $x, z3 = iz, umumiy yechimni hosil gilamiz.
+
+Fundamental yechimlar soni esa n — r = 4 — 2 = 2 bo'lib, ularni z,
+va z4 erkli o'zgaruvchilarga mos ravishda 1 va 0 hamda 0 va 3 giymatlar
+Berish orqali topamiz, ya'ni Z; = (—2;1;0;0), Z; = (—5;0;4;3). Beril-
+gan bir jinsli chizigli tenglamalar sistemasining ixtiyoriy yechimi Z, va
+Z, yechimlarning chizigli kombinatsiyasidan iborat bo‘ladi. a
+
+4.3.1 Mustagqil ishlash uchun misol va masalalar
+
+1. Bir jinsli chiziqli tenglamalar sistemasining umumiy va fundamental
+yechimlar sistemasini toping:
+
+[21 = Tm z3 = 0, [201 + 22 - z3 = 0,
+a)q 3; — xy + 3x3 =0, b)¢ 5zy + 423 — 6z3 = 0,
+| 571 — 5zp + 4z3 = 0. 1 3zy + 225 — 5z3 = 0.
+
+=== PAGE 3 ===
+144
+[2
+PY 21
+. ol
+
+3z, —
+
++
+
+3zy +
+z +
+529 +
+172, +
+
+BOB 4. CHIZIQLI TENGLAMALAR SISTEMASI
+223 = 0, (32) + 525 + 273 = 0,
+3z3 = 0, 4) 4x) + 7x9 + S523 = 0,
+4z3 = 0, T) + Tp — 423 = 0,
+4z3 = 0. 2z; + 9z9 + 6z3 = 0.
+
+2. Bir jinsli chizigli tenglamalar sistemasining umumiy va fundamental
+yechimlar sistemasini toping:
+
+8)
+
+b) |
+
+c)
+
+d) {
+
+2r) — 4z,
+3z, — 6x,
+4zy - 8z,
+T) + 279
+3z; + 529
+4z) + 5x9
+3z) + 8x29
+6x) — 2x,
+91; — 3z,
+6x; — 2z,
+3; — zy
+n — 13
+T2 — Ig
+=I) + I3
+Ty + 24
+—I3 + Is
+—T4 + Tg
+7 — 73 +
+T2 — Tq +
+I — I +
+T2 — T3 +
+Ty — Tq +
+
++ 5z3 + 3z4 = 0,
+
++ 4z3 + 224 = 0,
+
++ 1723 + 1lz4 = 0
+
++ 4zz — 3z4 = 0,
+
++ 6z3 — 4dz4 = 0,
+
+— 223 + 3z4 = 0,
+
++ 24zy — 1924 = 0
+
++ 2z3 + 5x4 + Txs = 0,
++ 4z3 + 8z4 + 925 = 0,
++ 6z3 + 7x4 + x5 = 0,
++ 4z3 + 4z4 — 25 = 0
+= 0,
+
+= 0,
+
+- 5 = 0,
+
+- 2 = 0,
+
+= 0,
+
+= 0.
+
+z5 = 0,
+
+zs = 0,
+
+zs — x6 = 0,
+
+zg = 0,
+
+zs = 0.
+
+=== PAGE 4 ===
+4.3. BIR JINSLI TENGLAMALAR SISTEMASI. KRONEKER-KAPELLI TEOREMASI 145
+
+f)
+
+3. Chizi
+
+b)
+
+c)
+
+d)
+
+e)
+
+( 51,
+
+27;
+Tz,
+51;
+
+(=z
+
+zy
+21,
+3z;
+Sz
+
+zy
+37
+2x;
+2x,
+Sz;
+
+Ea)
+3z;
+2x
+
+Et
+
+10z;
+15z;
+252,
+30z
+
+451;
+36z,
+35zy
+47x)
+27x,
+
++ 6x9
++ 329
++ 9zy
++ 9x9
+
+2x9
+4z9
+9z,9
+Tzq
+Tz
+
+2x,
+219
+3zy
+2z,
+5zy
+
++++ FHF A+ A+++
+I+ ++ +++ ++ +++
+
+nN Ww
+g§8 88
+NNN
++ 1
+
+§
+
+++ +++ +++
+
+3522
+57x,
+6929
+
++4 ++
+
+— 28x
+— 23x,
+— 2lzy
+— 32z,
+— 192,
+
+223 + Tz4 + 425 =
+z3 + 4z4 + 225 =
+3z3 + 5z4 + 67s
+3z3 + z4 + 6x5
+
+3z3
+5x3
+8z3
+Tzs
+9z3
+
+3z3
+z3
+z3
+2x3
+2z3
+
+2z3
+3
+3
+3z3
+
+$=
+
+i
+i
++
++
+
+17z3
+26z3
+42z3
+5lzg
+
+34z3
+2923
+
+36z3
+22x53
+
+I
+cooo
+
+iqli tenglamalar sistemasining umumiy yechimini toping:
+
+4z4 = 3,
+224 = 2,
+3zy = 17,
+2z¢ = 12,
+214 = 20.
+24 = 1,
+Tq = 1,
+z4 = 1,
+z¢ = 1,
+
+= 2
+3x = 1,
+2x4 = —4,
+zy = —6,
+Ty = —4
++ 44z4 = 25,
++ 69z4 = 40,
++ 108z4 = 65,
++ 133z4 = 95
+— 5224 = 9,
+— 43z4 = 3,
+— 4534 = 16,
+— 48x = —17,
+— 3524 = 6
+
+=== PAGE 5 ===
+146
+
+f)
+
+g)
+
+h)
+
+27x)
+50x,
+RIE
+
+122;
+162,
+18x,
+10z,
+
+(247,
+36x;
+48x,
+
+60x,
+
++++
+
+++ + +
+
+122,
+24x,
+5lzy
+PAE
+
+14z,
+1829
+209
+1225
+
+14z,
+21x
+28x49
+352,
+
+BOB 4. CHIZIQLI TENGLAMALAR S!STEMASI
+
+163
+32z3
+68z3
+2823
+
+1523
+2223
+21z3
+16z3
+
+3023
+4523
+60z3
+
++
++
++
++ 7523
+
+25x
+47x,
+954
+4624
+
++++
+
+234
+2924
+324
+20x,
+
++++ +
+
+40z4
+Glzy
+8274
+9924
+
+FF +
+
+29,
+
++++
+
+ro
+no
+
+4. Parametrli chiziqli tenglamalar sistemasining unumiy yechimni to-
+
+ping:
+
+b)
+
+c)
+
+5x
+4)
+81,
+Tz,
+
+3zy
+21,
+
+dz
+21,
+
+4zy
+dz)
+
++
+
+++ +
+
+3zo
+22,
+629
+32,
+
+2x9
+3x,
+629
+
+22
+
+5zq
+6zy
+14x;
+3x9
+
+++ +
+
+2x3
+3z3
+
+z3
+Tz3
+
++ dzy
++ Tz
+S54
++ 17zy4
+
+5x3
+6z3
+9z3
+4x3
+
++ dz
++ 8x4
+— 20x,
++ Azy
+
++ z3 + 314
++ 3z3 + 534
++ x3 + Tz4
++ 3x3 + Ay
+
+w
+
+Ns aN
+
+=== PAGE 6 ===
+4.3. BIR JINSLI TENGLAMALAR SISTEMASI. KRONEKER-KAPELLI TEOREMASI 147
+
+d)
+
+e)
+
+f)
+
+8)
+
+h)
+
+2x — zy + 3r3 + 44 = 5,
+dz, — 2x9 + 523 + 634 = 7,
+6x); — 3z9 + Tz3 + 8z4 = 9,
+Azy — 4zp + 973 + 10z¢ = 11
+2zy + 3z9 + z3 + 234 = 3,
+4zy + 629 + 3z3 + 474 = 5,
+6zy + 929 + 5x3 + 624 = 7,
+8x) + 12z9 + Tz3 + Azq = 9.
+[Az + To + x3 = 1,
+Ty + Az + T3 = 1,
+1 zy + 2p + Arg = 1.
+Az) + Zo + T3 + Tg = 1,
+Ty + AZy + 23 + T= 1,
+Ty + Tp + Ary + Tq = 1,
+Ty + Za + Tz + Azg = 1
+| 1+ Nz + 2 + EN
+zy + (1+ N)z2 + z3
+| z+ 22 + (14 N)z3
+
+5. Bir jinsli chizigli tenglamar sistemasini yeching:
+
+( 3z,
+
+6x,
+9zy
+3,
+
+x
+
+8
+
+1
+
+B88
+
++ 229 + x3 + 374 + 575 =
++ 4z9 + 323 + S574 + T25 =
++ 629 + 5z3 + Tz4 + 925 =
++ 219 + 4z4 + 8z5 =
++ 24+ T3 + Ty + TH
+— To + 273 — 224 + 325
++ zo + 473 + 4x4 + 925
+— 22 + 8z3 — 8x4 + 272s
++ 23 + 1623 + 16z4 + 8lzs
+
+[| [
+coo o
+
+o
+
+coe
+
+A,
+AZ
+
+
+=== PAGE 7 ===
+148
+
+<)
+
+d)
+
+e) «
+
+f)
+
+g
+
+h)
+
+21)
+
+3x,
+5x
+4x,
+Tz)
+
+EI
+E3)
+zz
+
+Zn-2
+Zn-1
+
+BOB 4. CHIZIQLI TENGLAMALAR S'STEMASI
+
+— 2Ty + x3 + TY — Tj
++ 22 — 23 — Tq + Ts
++ Tag — 5x3 — 5x4 + S25
+— Ty — 2x3 + Ty — Ts
++ dzg — Bzz + Trg =
+
+— 8zy + 3z3 — 224 =
+
++ llzy — 13z3 + 16z4 =
+
+—- 2zy + z3 + 334 =
+
+— 229 + 23 — Ty + Ts
+
++ zy — z3 + 224 — 335
+
+— 229 — zT3 + xy — 235
+
+— 5z9 + z3 — 224 + 215
+
++ I —- 3zy — 25
+— To + 223 — T4
+
+— 229 + 623 + 374 — das
++ dzy — 223 + 474 — T23
++ dry + 3 + 224 + 375
++ Tz + z3 + 3z4 + dzs
++ 523 + 223 + z4 + 525
++ 10z2 + z3 + 6z4 + S25
++ z= 0,
+
++ T+ z3 = 0,
+
++ z3 + z4 = 0,
+
++ Zp + Zp
+
++ x, = 0.
+
+ocooQo
+
+coco PLLL°
+
+cooo
+
+6. Matritsaviy tenglamalarning umumiy yechimini toping:
+
+9 (§
+
+-3
+—6
+
+)-x
+
+23
+46
+
+(32)

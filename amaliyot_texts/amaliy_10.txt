@@ -1,0 +1,341 @@
+2.2. MUAVR FORMULASI, KOMPLEKS SONDAN ILDIZ CHIQARISH
+
+43
+
+2.2.3-misol. Biming 3-darajali ildizlarini toping.
+Ek = cos
++ i sin
+k = 0,1,2 ekanligidan:
+= 1,
+
+2tt . . 2%
+1 ,v3
+e, = cos—+«sin—= —-,
+
+I
+
+4% .
+4tt
+1
+\/3
+£9 = cos — + zsin — = —- — 2——.
+3
+3
+2
+2
+kelib chiqadi. £1, £2 lar biming 3-darajali boshlang'ich ildizlaridir.
+
+i
+
+i:
+
+2.2.2
+
+Mustaqil ishlash uchun misol va masalalar
+
+1. Muavr formulasidan foydalanib, quyidagi kompleks sonlarni darajaga oshiring:
+
+r
+
+a) (6 - 6z)5,
+b) (-1 - V3i)6, c) (1 + x/3z)8,
+d) (5^3 - 5z)3, e) (-4 + 4f)6,
+f) (-5V^ - 5i)7.
+2. Quyidagi kompleks sonlarning barcha ildizlarini toping.
++ 6z,
+
+a) 5/—5 + 5i, b) \/—2 — 2\Z3f, c)
+
+f) </2 + 2\/3i.
+
+d) V-7 + 7i, e)
+3. Hisoblang:
+
+1
+
+I:
+
+ll !
+
+II
+
+ib :
+l| '
+
+fc
+'I <
+
+a)
+
+6
+
+1-^
+
+y v^3 + i
+
+b) +
+
+3— 2
+
+c)
+
+6
+
+1—2
++ 2\/3
+
+4. Hisoblang:
+\20
+a) (1 + i)25,
+b)( l+tx/3
+1—t > '
+(—l+t'x/3)15 + (-l-iy/3)15
+c) (1 - H24’d) (1-i)20 T (1+i)20 •
+
+5. Agar y/a + bi = ±(a+/3i) tenglik o'rinli bo'lsa, \/—a — bi ifodaning
+qiymatini toping.
+
+'I
+r
+
+IJl :
+
+ll
+
+6. Quyidagi tenglamalarni yeching:
+
+a) |z| + z = 8 + 4i,
+
+i
+
+■i!
+
+b) |^| — z = 8 + 12i.
+
+i h
+:H I
+
+J
+
+BOB 2. KOMPLEKS SONLAR
+
+44
+
+7. Quyidagi tenglamalarni yeching:
+
+a) (z + l)n + (z - l)n = 0,
+
+b) (z + i)n + (z - i)n = 0.
+
+8. Agar z va z' kompleks sonlari uchun u — \Z~zz' tenglik o'rinli bo’lsa,
+quyidagi tenglikni isbotlang:
+I
+
+| 2 | + | Z' | =
+
+z + z'
+
+z + z'
+
+——- + —+“-
+
+9. Agar |z| < | bo‘lsa, |(1 + i)z3 + iz\ < | ekanligini isbotlang.
+I
+
+10. Isbotlang:
+7tt
+
+(l + 2x/3)(l + z)(cos9? + isin(p) = 2\/2[cos(— b¥>) + isin(^+ </?)].
+JL *
+
+11. Soddalashtiring:
+12- Hisoblw
+
+13. Ixtiyoriy n-butun son uchun quyidagilarni isbotlang:
+a) (l + i)n = 2?(cosf+ isin^),
+b) (^/3 - i)n = 2n(cos f - i sin f).
+14. Agar
+| + i^ va z^ = — | — i^, berilgan bo'lsa, zn + z%
+ifodaning qiymatini toping.
+
+15. Agar z = cos y + i sin y bo‘lsa, (1 + z)n ifodaning qiymatini toping.
+16. Hisoblang: (1 + cos a + i sin a)n.
+17. Agar z + | = 2cos0 bo‘lsa, u holda quyidagi tenglikni isbotlang:
+zm + — = 2 cos mO.
+zm
+18. Isbotlang:
+■
+
+1 + i tg a n
+1 — i tg a
+
+1 + i tg na
+1 — itgna
+
+*
+
+2.2. MUAVR FORMULASI, KOMPLEKS SONDAN ILDIZ CHIQARISH
+
+45
+
+H
+II
+
+19. Quyidagilarni cos x va sin x lar orqali ifodalang:
+
+a) cos5x,
+
+b) cos8z,
+
+c) sin6x,
+
+d) sin7x.
+
+20. tg Qip ni tg <p orqali ifodalang.
+21.
+
+ni cosz orqali ifodalang.
+i i
+
+22. Quyidagi ifodalarni birinchi darajali trigonometrik funksiyalar orqali
+ifodalang:
+a) cos3x,
+
+b) sin4x,
+
+c) sin5z,
+
+d) cos6x,
+
+e) sin3 x cos5 x.
+
+23. Birning quyidagi darajali ildizlarini toping:
+
+a) 4,
+
+b) 6,
+
+c) 8,
+
+d) 12,
+
+e) 24.
+
+24. Birning quyidagi darajali boshlang'ich ildizlarini toping:
+
+a) 4,
+
+b) 5,
+
+c) 8,
+
+d) 10,
+
+e) 12.
+
+25. Birning quyidagi darajali ildizlari yig'indisini toping:
+
+a) 4,
+
+b) 6,
+
+c) 9,
+
+d) 10,
+
+I •'
+
+II
+
+e) 15.
+
+26. Birning n-darajali ildizlari yig'indisini nolga teng ekanligini isbotlang.
+27. Birning rr-darajali ildizlari ko'paytmasini toping.
+
+28. Birning quyidagi darajali boshlang'ich ildizlari yig‘indisini toping:
+a) 6,
+
+b) 8,
+
+c) 10,
+
+d) 15,
+
+e) 24.
+
+29. Birning n-darajali ildizli e uchun quyidagi ifodani hisoblang:
+
+1 + 2s + 3e2 -I-------1- ne:71-1.
+
+30. Birning 2n-darajali boshlang'ich ildizli e uchun quyidagi ifodani
+hisoblang:
+l + e + e2 + ••• + £” 1
+
+■t
+Jl
+
+auc
+
+BOB 2. KOMPLEKS SONLAR
+
+46
+
+31. Quyidagilarni isbotlang:
+m—1
+
+a) 22mcos2m x = 2 £ C£m cos2(m - k)x +
+k=Q
+
+m
+
+b) 22m cos2m+1 x = 52 ^m+l cos(2m — 2k + l)a;,
+fc=0
+
+m—1
+
+c) 22msin2m x = 2 £ (-Ir+Mmcos2(m - k)x +
+
+,
+
+k=Q
+m
+
+sin(2m — 2k + l)z.
+
+d) 22msin2m+1
+k=0
+
+32. Quyidagi yigcindilarni toping:
+a) l-C2 + Cj-C= + ...,
+
+b) c;-cs+c=-c;+...,
+c) Ci-lC’ + |C5-iCJ+....
+
+33. Quyidagilarni isbotlang:
+a) l + C^ + C8 + --- = |(2n-1 + 2?cos7),
+b) C1 + C5 + C9 + ... = l(2n-1+2§sin^),
+
+c) C2 + C^ + C10 + --- = l(2n-1-2?cos^),
+d) C° + C^ + C11 + --. = i(2n-1-2§sin^),
+
+e) 1 + C2 + C® + ••• = ! (2n + 2 cos +”),
+f) C1 + C^ + C2 + --. = l(2n + 2cos (n—2)tt i
+3
+
+)
+
+g) C2 + C5 + C8 + ... = l(2n + 2cos (n—4)tt ’
+3
+
+>
+
+34. Quyidagi tenglikni o‘rinli ekanligini ko'rsating:
+
+sin x + sin 2x + ' ■ ■ + sin nx =
+
+sin
+
+sin
+sin |
+
+

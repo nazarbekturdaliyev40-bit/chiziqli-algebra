@@ -1,0 +1,786 @@
+3.4. MINORLAR VA ALGEBRAIK TO'LDIRUVCHILAR
+
+3.4.2
+
+87
+
+Mustaqil ishlash uchun misol va masalalar
+
+1. Uchinchi qator bo‘yicha yoyib determinantni hisoblang:
+
+2- 341
+4-232
+a b c d
+3- 143
+2. Ikkinchi ustun bo‘yicha yoyib, determinantni hisoblang:
+5 a 2 -1
+4 6 4—3
+2 c 3 -2
+4 d 5 -4
+
+3. Determinantlarni hisoblang:
+a 3 0 5
+0 6 0 2
+,
+1 2 c 3
+0 0 0 d
+
+a)
+
+1 0 2 a
+b)
+
+2 0 6 0
+
+c)
+
+3 c 4 5
+d 0 0 0
+
+x a b 0 c
+0 y0 0 d
+0 ez 0 f
+g hk u l
+0 00 0 v
+
+4. Quyidagi determinantlarni rekurrent munosabatlar usulidan foydalanib hisoblang:
+3
+
+a)
+
+1
+0
+
+2
+3
+1
+
+0 .
+2 .
+3 .
+
+0
+0
+0
+
+b)
+
+7
+2
+0
+
+5
+7
+2
+
+0 ...
+5 ...
+7 ...
+
+0
+0
+0
+
+I
+
+I
+
+I
+)■
+
+0
+
+0
+
+0 .
+
+3
+
+0
+
+0
+
+0 ...
+
+7
+
+r
+
+BOB 3. MATRITSALAR VA DETERMINANTLAR
+
+88
+
+c)
+
+e)
+
+g)
+
+5
+4
+0
+0
+
+6
+5
+1
+0
+
+0
+2
+3
+1
+
+0 ...
+0 ...
+2 ...
+3 ...
+
+0
+0
+0
+0
+
+0
+0
+0
+0 , d)
+
+0
+0
+
+0
+0
+
+0
+0
+
+0 ...
+0 ...
+
+3
+1
+
+2
+3
+
+1
+3
+0
+0
+
+2
+4
+2
+0
+
+0
+3
+5
+2
+
+0 ...
+0 ...
+3 ...
+5 ...
+
+0
+0
+0
+0
+
+0
+0
+0
+0 , f)
+
+0
+0
+
+0
+0
+
+0
+0
+
+0 ...
+0 ...
+
+5
+2
+
+3
+5
+
+1 0
+1 ai
+1 1
+1 0
+
+0
+0
+
+0 ...
+0 ...
+0 ...
+02
+1 o3 ...
+
+0
+0
+0
+0
+
+1
+0
+0
+, h)
+0
+
+1
+
+0
+
+1
+
+Cln
+
+0
+
+0 ...
+
+-yi
+xi
+0 ..
+0 ~V2 22 ..
+
+an
+0
+0
+
+0 ..
+
+Xn
+
+ao
+
+ai a2 . •
+
+0
+
+0
+
+0
+
+1
+
+1
+
+ai
+
+1 ..
+0 ..
+
+1
+
+0
+
+fl2 ..
+
+1
+0
+0
+
+1
+
+0
+
+0 ..
+
+On
+
+Oibi
+
+C1&2 O1&3 . . . aibn
+
+01i>2
+
+O2&2 O2&3 . . . O^bn
+
+O1&3
+
+0263 0363 . . . a3&n
+
+Ol^n a^bn a^bn • • ■ Onbn
+
+I
+
+5. Determinantlami hisoblang:
+
+a)
+
+x
+0
+0
+
+y
+
+0
+
+y
+
+X
+
+0 ...
+y ...
+
+0
+
+X ...
+
+0
+0
+0
+
+0
+0
+
+0 ...
+0 ...
+
+x
+0
+
+0
+0
+0
+y
+x
+
+0 ..
+x —1 0 ..
+0 X —1 . .
+
+Oq —1
+
+ai
+
+,
+
+b)
+
+02
+
+On-1
+
+On
+
+0
+0
+
+0
+
+0
+
+0
+
+0 ..
+0 ..
+
+0
+0
+0
+
+0
+0
+0
+
+x —1
+0 x
+
+3.5. LAPLAS TEOREMASI
+
+95
+
+2. Laplas teoremasidan foydalanib determinantlarni hisoblang:
+
+a)
+
+5 2 13 2
+4 0 7 0 0
+2 3 7 53
+2 3 6 4 5
+3 0 4 0 0
+
+2 14 3 5
+3 4 0 5 0
+3 4 5 2 1
+1 5 2 4 3
+4 6 0 7 0
+
+b)
+
+c)
+
+7 2 13 4
+1 0 2 0 3
+3 0 4 0 7
+6 3 2 4 5
+5 12 2 3
+
+3. Laplas teoremasidan foydalanib determinantlarni hisoblang:
+2 -1 3 4 -5
+4 -2 7 8 -7
+a) -6 4 -9 -2 3
+3 -2 4
+1 -2
+-2 6 5 4 -3
+
+5 -5 -3 4 2
+-4 4 3 6 3
+3 -1 5 -9 -5 ,
+b)
+-7 7 6 8 4
+5 -3 2 -1 —2
+
+2 1 2 3 2
+3 -2 7 5 -1
+c) 3 -1 -5 -3 -2
+5 -6 4 2 —4
+2 -3 3 1 -2
+
+2 -3 5 —2 1
+3 2 5 —4 -3
+d) -2 3 —4 2 -3
+6 4 7 -8 -1
+2 -1 7 -8 -1
+
+4. Laplas teoreinasidan foydalanib determinantlarni hisoblang:
+
+a)
+
+1 2 0 0 0 0
+3 4 0 0 0 0
+7 6 5 4 0 0
+,
+2 3 4 5 0 0
+5 1 2 6 7 3
+2 7 5 3 4 1
+
+1 2 3 4 5 3
+6 5 7 8 4 2
+9 8 6 7 0 0
+b) 3 2 4 5 0 0 ,
+3 4 0 0 0 0
+5 6 0 0 0 0
+
+7 6 5 4 3 2
+9 7 8 9 4 3
+7 4 9 7 0 0
+c) 5 3 6 1 0 0
+0 0 5 6 0 0
+0 0 6 8 0 0
+
+5. Determinantlarni hisoblang:
+1
+
+a)
+
+X]
+
+Vi
+■21
+
+1
+0
+0
+x2 cosa sina
+y2 cos/3 sin/3
+z2 cos7 sin^
+
+0 a b c
+o! 1 0 0
+b)
+b' 0 1 0
+</001
+
+0 a b c
+1 x 0 0
+c) 1 0 y 0
+1 0 0 z
+
+J
+
+BOB 3. MATRITSALAR VA DETERMINANTLAR
+
+96
+
+I
+
+1
+1
+d) 0
+
+1
+2
+1
+
+!
+
+1 X X X
+
+0 0 a‘
+a a'
+y3 y2
+b b' y3 x2 y-i
+c d y3 yi x3
+
+e)
+
+0 a?i x2 x3 X4
+
+0 a;?,21 rr
+xi2 xl x^
+
+1
+
+b c
+b' d
+
+0 0 a
+
+0
+0
+1
+
+0
+0
+1
+
+1
+3
+1
+
+1 a 0 0
+
+f) 10 6 0
+
+1 0 0 c
+
+6. Determmantlarni hisoblang:
+Oll
+
+0
+0
+
+012
+
+013
+
+Ol,2n-2
+
+Ol,2n-1
+
+022
+
+023
+
+O2,2n-2
+
+O2,2n-1
+
+0
+
+033
+
+O3,2n-2
+
+0
+
+Ol,2n
+
+0
+0
+
+a)
+
+>
+
+0
+
+0
+0
+
+b)
+
+O2n-1,2 O2n-1,3
+
+O2n,l
+
+O2n,2
+
+«11
+
+«12
+
+1
+
+1
+0
+
+«21
+
+«31
+
+■
+
+O2n,2n-2
+
+O2n,2n—1
+
+1
+
+1
+
+1
+0
+
+xi
+
+«22
+
+X2
+
+«2n
+
+□7n
+
+0
+
+%2
+
+™2
+
+X1
+
+«32
+
+0
+
+3?2
+
+O>n2
+
+0
+
+x2
+
+X
+
+X
+
+X
+
+X
+
+1 + 2x
+x
+1 + 2x
+X
+
+O2n-l,2n-2 O2n-l,2n-l
+
+«ln
+
+x
+
+c)
+
+•
+
+1
+0
+
+Onl
+
+4-1
+
+O2n,3
+
+0
+x2
+0
+/y.n-1
+
+^n
+
+X3n
+
+O2n,2n
+
+0
+x
+x2n
+
+9
+
+0
+
+~n—1
+^n
+
+0
+
+xn
+
+0
+0
+
+0
+
+• O2n-2,2n-2
+
+&2n-2,3
+
+• • • onn xn
+
+0
+
+• • •
+X
+
+X
+
+X+1
+
+X
+
+X
+
+X
+
+.. 1+X 1+X
+.. 1 + 2x 1 + x
+
+x
+
+X
+
+X
+
+X
+X
+
+X
+
+X
+
+1+X
+
+X
+
+X
+
+X
+
+

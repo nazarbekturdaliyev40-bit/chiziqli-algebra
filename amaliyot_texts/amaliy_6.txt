@@ -1,0 +1,423 @@
+BOB 4. CHIZIQLI TENGLAMALAR SISTEMASI
+
+120
+
+Mustaqil ishlash uchun misol va masalalar
+
+4.1.4
+
+1. Chiziqli tenglamalar sistemasini Kramer usulidan foydalanib yeching.
+a) *
+
+' 2xi ~
+x2 = 1,
+xi + 16x2 = 17.
+
+' xi + x2 + x3
+c) < xi - x2 — x3
+k X1 - x2 + x3
+
+= 6,
+= 0,
+= 0.
+
+x2 + 3x3 = 9,
+3xi — 5x2 + x3 = -4,
+
+b)
+
+2xi + 5x2 = 1,
+3xi + 7x2 = 2.
+
+(
+d) ,
+
+2xi + x2 +
+xi + 2x2 +
+Xi +
+
+4xi - 7x2 +
+
+x2 + 2x3 = 0.
+
+2xi + 3x2 + 5x3 = 10,
+
+2x1 —
+
+e)
+
+x3 = 3,
+rr3 = 0,
+
+f)
+
+X3 = 5.
+
+3xi + 7x2 + 4x3 = 3,
+xi + 2x2 + 2x3 = 3.
+
+2. Chiziqli tenglamalar sistemasini Gauss usulidan foydalanib yeching.
+
+a)
+
+x2 + 5x3 = 10,
+x2 - 3x3 = -2,
+2xi + 4x2 + a>3 = 1-
+
+2xi —
+Xi +
+
+b)
+
+5xi +
+xi +
+2xi +
+
+2x2 - 4x3 = 4,
+3x2+ 4x3 = 3,
+4x2+ X3 = 1.
+
+c)
+
+xi 3xi +
+2xi —
+
+2x2+ X3 = -4,
+2x2— X3 = 8,
+3x2 + 2x3 = —6.
+
+d)
+
+7xi +
+3xi +
+2xi —
+
+4x2 - x3 = 13,
+2x2 + 3x3 = 3,
+3x2 + z3 = -10.
+
+e)
+
+3xi
+2x2 — 5x3 + x4 = 3,
+2xi — 3x2 + x3 + 5x4 = -3,
+xi + 2x2
+- 4x4 = -3,
+x2 — 4x3 + 9x4 = 22.
+
+I
+
+4.1. CHIZIQLI TENGLAMALAR SISTEMASI VA ULARNI YECHISH USULLARI
+
+f)
+
+g)
+
+h)
+
+121
+
+x3 + 5x4 — 7 = 0,
+— 2x2 — 2x3 — 3x4 —3=0,
++1 = 0,
+— x2 + 2x3
+~ 3x2 +
+
+4xi
+Xi
+3xi
+2xi
+
++ 3x2 + 2x3 — 8x4 + 7 = 0.
+
+2xi
+2xi
+3xi
+xi
+
+— 2x2
++
++ x4 + 3 = 0,
++ 3x2 + X3 — 3x4 + 6 = 0,
++ 4x2 — X3 + 2x4
+= 0,
++ 3x2 + x3 —
+2 = 0.
+
+Xi
+3xi
+2xi
+3X!
+
++ x2
+— x2
++ 3x2
++ 2x2
+
+— 6x3
+— 6x3
++ 9x3
++ 3x3
+
+I;
+' li
+
+- 4x4 = 6,
+— 4x4 = 2,
++ 2x4 = 6,
++ 8x4 = —7.
+!!
+
+3. Chiziqli tenglamalar sistemasini teskari matritsa usulidan foydalanib
+yeching.
+a)
+
+3xj + 2x2 + x
+x33 = 5,
+2xi + 3x2 + x
+x33 = 1,
+2xi + x2 + 3x3 = 11.
+
+b)
+
+xi + 2x2 + 4x3 = 31,
+5xi + x2 + 2x3 = 20,
+3xi — x2 + x3
+0.
+
+c)
+
+2xi + 4x2 — X3
+1,
+3xi + 5x2 — 2x3 =
+3, d)
+xi - 2x2
+= -7.
+
+5xi _ 4x2 + x3 = 23,
+xi - x2 + x3 = 1,
+2xi + 4x2 —3x3 = 15.
+
+e)
+
+x2 + a;3 = 16,
+x2 - 3x3 = 14,
+3xi + 3x2 — 4x3 = 31.
+
+2xi — X2
++5x3 = 10,
+Xi + x2
+-3x3 = —2,
+2xi + 4x2 + x3 = 1.
+
+6x1 +
+
+f)
+
+!|
+
+I
+
+i
+
+I
+
+4. Chiziqli tenglamalar sistemasini Kramer usulidan foydalanib yeching.
+
+a)
+
+2xi
+4xi
+8x1
+3xi
+
++ 2x2 — x3 + x4 = 4,
++ 3x2 — x3 + 2x4 = 6,
++ 5x2 — 3x3 + 4x4 = 12,
++ 3x2 — 2x3 + 2x4 = 6.
+I,
+
+BOB 4. CHIZIQLI TENGLAMALAR SISTEMASI
+
+122
+
+2xi + 3x2 + IIX3 + 5x4 = 2,
+Xi + X2 + 5x3 + 2x4 = 1,
+b) <
+2xi + x^ + 3x3 + 2x4 = —3,
+xi + x^ + 3x3 + 4x4 = —3.
++ 4x3 + x4 = 20,
++ 2X3 + x4 = 11,
++ 9x3 + 7x4 = 40,
++ 9x3 + 2x4 = 37.
+
+c)
+
+2xi + 5x2
+xi + 3X2
+2xi + 10x2
+3xi + 8x2
+
+d)
+
+3^1 + 4x2 + X3 + 2x4 + 3 = 0,
+3xi + 5x2 + 3x3 + 5x4 + 6 = 0,
+6xi + 8x2 + X3 + 5x4 + 8 = 0,
+3xi + 5x2 + 3x3 + 7x4 + 8 = 0.
+
+e)
+
+7xi + 9x2 + 4x3 + 2x4 — 2
+2xi “ 2x2 + #3 + x4 — 6
+5xi + 6x2 + 3x3 4- 2x4 — 3
+2xi + 3x2 + X3 + x4
+
+f)
+
+6x + 5y — 2z + 4i + 4 = 0,
+9x - yy ++ bz -— tt — 13 = 0,
+3x + 4y + 2z — 2t
+2t — 1 = 0,
+3x - 9y
++ 2t — 11 = 0.
+2x -
+
+7x
+g) < x
+x
+
+h)
+
+y
+—4y
+-2y
+y
+
+— 62 +
++ 2z —
+— 4z +
++ 2z —
+
+= 0,
+= 0,
+= 0,
+= 0.
+
+3t
+3t ++ 1 = 0,
+15t + 32 = 0,
+9i -— 5 = 0,
+9t
+6t
+6t ++ 8 = 0.
+
+2x — 5y + 3z + t = 5,
+3x - 7y + 3z — t = -1,
+5x — 9?/ + 6z + 2t = 7,
+4x — 6y + 3z + t = 8.
+
+4.1. CHIZIQLI TENGLAMALAR SISTEMASI VA ULARNI YECHISH USULLARI
+
+123
+
+5. Quyidagi chiziqli tenglamalar sistemasini Gauss usulidan foydalanib
+yeching.
++ 3.£3 + 2^4 — 3 = 0,
+— 2£3 — £4 + 4 = 0,
+— 3£3 — 2£4 — 3 = 0,
++ £3 + 3£4 + 7 = 0.
+
+a)
+
+2£i
+6£i
+10£i
+8X1
+
+— 3£2
++ 9£2
++ 3£2
++ 6£2
+
+b)
+
+£1
+3£i
+2£1
+£1
+
++ 2x2 + 5£3 + 9£4 = 79,
++ 13£2 + 18£3 + 30£4 = 263,
++ 4£2 + 11£3 + 16^4 = 146,
++ 9£2 + 9£3 + 9£4 = 92.
+
+<0
+
+£1
+£1
+£1
+£1
+£1
+
++ £2 +
+£3 + £4£4++ £5 = 15,
++ 2x2 + 3£3 + 4£4 + 5£5 = 35,
++ 3£2 + 6x3 + 10£4 + 15£5 = 70,
++ 4£2 + 10£3 + 20£4 + 35£5 = 126,
++ 5£2 + 15£3 + 35£4 + 70£5 = 210.
+
+d)
+
+£1 + 2x2 + 3£3
+2£i ++3£
+3£22 ++ 7£3
+3£i
++ 5£2 + 11£3
+2£1 — 7£2 + 7£3
+£1 + 4£2 + 5£3
+
+e) <
+
+6£i
+10£i
+12£i
+8£i
+4£i
+
+f)
+
+£1 + £2 + 4£3 + 4x4 + 9£5 = —9,
+2£1 + 2X2 + 17£3 + 17£4 + 82£5 = -146,
+2£1
++ 3£3 —
+£4 + 4£5 = -10,
+X2 + 4£3 + 12£4 + 27£5 = -26,
+£1 + 2x2 + 2£3 + 10£4
+= 37.
+
++ 4£4
++ 10£4
++ 16£4
++ 7£4
++ 3£4
+
++ 5£5
++ 13£5
++ 21£5
++ 2£5
++ 10£5
+
+= 2,
+= 12,
+= 17,
+= 57,
+= 7.
+
++ 6£
+6x22 ++ 5£3 + 18£4 + 20£5 = 14,
++ 9£2 ++ 7£3 + 24£4 + 30£5 = 18,
++ 12£2 + 13£3 + 27£4 + 35£5 = 32,
++ 6£2 + 6£3 + 15£4 + 20£5 = 16,
++ 5£2 + 4£3 + 15£4 + 15£5 = 11.
+
+

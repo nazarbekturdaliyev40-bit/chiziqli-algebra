@@ -1,0 +1,138 @@
+5.2. KO'PHADLAR UCHUN YEVKLID ALGORITMI
+
+169
+
+hosil bo‘ladi. Bundan esa (<p(x) • *0(^))|/(^) ekanligi kelib chiqadi.
+Bir nechta /i(z), fz(x),..., fs(x) ko‘phadlar uchun ham eng katta
+umumiy bo‘luvchi tushunchasini aniqlash mumkin, ya’ni agar
+d(x)\fi(x),
+
+1 <i<s
+
+bo‘lib, fi(x) ko‘phadlarning boshqa ixtiyoriy h(x) umumiy bo‘luvchisi
+uchun h(x)\d(x) bo‘lsa, d(x) ko‘phad fi(x), f2(x),..., fs(x)
+ko‘phadlarning eng katta umumiy bo‘luvchi deyiladi.
+Berilgan fi(x) ko‘phadlarning EKUBini topish uchun awal
+(/i(z), fi(x)) = d2(x), so‘ngra (d2(x), fa(x)) = d3(x) va hokazo
+(ds_i(a;), fs(x)) = ds(x) topiladi. Topilgan ds(x) ko‘phad fi(x)
+ko‘phadlarning EKUBi bo‘ladi. Xususan, agar ds(x) = 1 bo‘lsa, u holda
+fi(x) ko‘phadlarga o‘zaro tub ko‘phadlar deyiladi.
+Agar Vz/j uchun (fi(x), fj(x)) = 1 bo‘lsa, /i(x), f2(x),..., fs(x)
+ko‘phadlarga juft-jufti bilan o‘zaro tub ko‘phadlar deyiladi.
+5.2.2-misol. f(x) = x3 4- x2 — x — 1 va g(x) = x3 — 1 ko‘phadlar
+uchun u(x) va v(x) ko‘phadlami aniqlang.
+
+Yechish. Yuqoridagi 5.2.1-misoldagi f(x) va g(x) ko‘phadlar uchun
+tuzilgan Yevklid algoritmidagi tengliklardan
+x - 1 = g(x) - (x2 - x)(x + 1) = g(x) - (/(x) - g(x))(x + 1) =
+= ff(^) - /(a:)(^ + 1) + PW(^ + 1) = /(^)(-^ - 1) + g^)(x + 2)
+hosil bo‘lib, bundan u(x) = -x-1, v(x) = x 4-2 ekanligini aniqlaymiz.
+
+5.2.1
+
+Mustaqil ishlash uchun misol va masalalar
+
+1. Quyidagi ko'phadlaming eng katta umumiy bo‘luvchisini toping:
+
+a) /(x) = x4 4- x3 - 3rr2 - 4x — 1, g(x) = x3 4- x2 - x - 1;
+b) f (x) = x5 + x4 — x3 — 2x — 1, g(x) = 3x4 4- 2rr3 4- x2 4- 2x - 2;
+c) f(x) = xG-7x4+Sx3-7x + 7, g(x) = 3xG-7x3 + 3x2-7;
+d) f(x) = xG + 2x4 — 4x3 — 3x2 4- Sx — 5,
+
+g(x) = x5 + x2 — x + l;
+
+i
+
+BOB 5. KO'PHADLAR
+
+170
+
+e) f(x) = x54-x4—x3—3x2—3x—1,
+
+g(x) = x4 —2x3—x2—2x4-1;
+
+f) /(x) = — 2ir4 4- x3 4- 7x2 — 12rr 4-10,
+g(x) = 3x4 — 6x3 4- 5rr2 4- 2x — 2;
+
+g) }(x) = x3 4- 3t4 — 12x3 — 52rr2 — 52rr — 12,
+g(x) = x4 4- 3x3 — 6rr2 — 22x — 12;
+h) /(z) = z4 4- 7x3 4- 19rr2 4- 23x 4-10,
+g(x) = x4 4- 7x3 4- 18x2 4- 22rr 4-12.
+
+2. Yevklid algoritmidan foydalanib, fi(x)M2(x) 4- f2(x)Mi(x) = d(x),
+tenglikni qanoatlantiruvchi M\ (x) va M2(x) ko‘phadlarni toping, bu
+yerda d(x) ko'phad /i(x) va f2(x) ko‘phadlarning eng katta umumiy
+bo‘luvchisi.
+
+a) /i(x) = x4 4- 2z3 — x2 — 4rr — 2,
+}2(x) = x4 4- x3 — x2 — 2x — 2;
+
+b) /i(x) = x3 4- 3rr4 4- x3 4- x2 4- 3x 4-1,
+fz(x) = x4 + 2x3 + x + 2;
+c) fi(x) = x6 — 4x5 4- llx4 — 27x3 4- 37x2 — 35x 4- 35,
+f2(x) = x5 — 3x4 4- 7x3 — 20x2 4- lOx — 25;
+d) /i(x) = 3x7 4- 6x6 — 3x5 4- 4x4 4- 14x3 — 6x2 — 4x 4- 4,
+/2(x) = 3x6 — 3x4 4- 7x3 — 6x 4- 2;
+e) /i(x) = 3x5 4- 5x4 — 16x3 — 6x2 — 5x — 6,
+/2(2) = 3z4 — 4x3 — x2 — x — 2;
+f) /i(x) = 4x4 — 2x3 — 16x2 4- 5x 4- 9,
+f2(x) = 2x3 — x2 — 5x 4- 4.
+
+3. Yevklid algoritmidan foydalanib, fi(x)M2(x) 4- fz(x)Mi(x) = 1,
+tenglikni qanoatlantiruvchi Mi(x) va M2(x) ko‘phadlarni toping.
+a) fi(x) = 3x3 — 2x2 4- x 4- 2, f2(x) = x2 — x 4-1;
+b) fi(x) = x4 - x3 - 4x2 4- 4x 4-1, f2(x) = x2 — x — 1;
+
+c) fi(x) = 2x4 4- 3x3 — 3x2 — 5x 4- 2, f2(x) = 2x3 4- x2 — x — 1;
+
+5.3. KELTIRILMAS KOTHADLAR.
+
+171
+
+d) /i(®) = 3x4 — 5z3 + 4z2 — 2x + 1, /2(z) = 3z3 — 2x2 + x — 1;
+e) /i(t) = x5 — 5x4 — 2z3 + 12z2 — 2x + 12,
+/2(x) = x3 — 5x2 — 3x + 17;
+
+f) /i(^) = z5 + 5t4 + 9z3 + 7x2 + 5z + 3,
+/2(.t) = x4 + 2t3 + 2x2 + x + 1.
+4. Quyidagi tengliklarni
+ko‘phadlarni aniqlang:
+
+a) (x4
+
+qanoatlantiruvchi
+
+Mi (x) . va
+
+M2(x)
+
+2x3 — 4t2 + 6t + l)Mi(z) + (rr3 — 5t — 3)M2(t) = x.4.
+4;
+
+b) (t^+^x^+t+IJM^tJ + ^t^+t3 —2t2+2t—1)M2(x) = x3 — 2x.
+5. (x — l)2 ga bo'lganda 2x hamda (x — 2)3 ga bo‘lganda 3z qoldiq
+chiquvchi eng kichik darajali ko‘phadni aniqlang.
+
+6. x4 — 2x3 — 2x2 + 10t — 7 ga bo‘lganda x2 + x +1 hamda x4 — 2x3 —
+3x2 + 13t — 10 ga bo'lganda 2x2 — 3 qoldiq chiquvchi eng kichik
+darajali ko‘phadni aniqlang.
+7. xmM(x) + (1 — T)nAT(x) = 1 tenglikni qanoatlantiruvchi M(x) va
+N(x) ko’phadlarni toping.
+
+5.3
+
+Keltirilmas ko‘phadlar.
+
+Biz ushbu mavzuda haqiqiy va kompleks koeffitsientli ko‘phadlarni
+ko‘paytuvchilarga ajratish masalasini ko‘rib chiqamiz. Haqiqiy koeffitsientli barcha ko‘phadlar to‘plamini R[x], kompleks koeffitsientli
+ko‘phadlar to‘plamini esa C[x] orqali belgilaylik.
+5.3.1-ta’rif. Agar f(x) ko‘phad notrivial bo‘luvchilarga
+bo‘lmasa, u holda u keltirilmas ko‘phad deyiladi.
+
+ega
+
+Dastlab, kompleks koeffitsientli ko‘phadlar to‘plamida qanday
+ko‘phadlar keltirilmas bo‘lishini aniqlaymiz. Bu savolga Algebraning
+asosiy teoremasi javob berib, biz bu teoremani isbotsiz keltiramiz:
+
+

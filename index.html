@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="uz" class="h-full bg-slate-900 text-slate-100">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chiziqli Algebra — Semestr Mavzularini Bosqichma-bosqich Yechuvchi Dastur</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- KaTeX CSS & JS for crisp mathematical rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    
+    .matrix-input {
+      width: 3.5rem;
+      height: 2.75rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1rem;
+      background: #1e293b;
+      border: 1.5px solid #334155;
+      border-radius: 0.5rem;
+      color: #f8fafc;
+      transition: all 0.2s;
+    }
+    .matrix-input-md {
+      width: 2.6rem;
+      height: 2.2rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.85rem;
+      background: #1e293b;
+      border: 1.5px solid #334155;
+      border-radius: 0.375rem;
+      color: #f8fafc;
+      padding: 0;
+      transition: all 0.2s;
+    }
+    .matrix-input-sm {
+      width: 2.05rem;
+      height: 1.85rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.75rem;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 0.25rem;
+      color: #f8fafc;
+      padding: 0;
+      transition: all 0.2s;
+    }
+    .matrix-input:focus, .matrix-input-md:focus, .matrix-input-sm:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.4);
+      outline: none;
+      background: #0f172a;
+    }
+    .katex-display {
+      margin: 0.6em 0 !important;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0.4em 0;
+    }
+    @media print {
+      #sidebar, #control-panel, #header-actions { display: none !important; }
+      #solution-container { display: block !important; width: 100% !important; }
+      body { background: white !important; color: black !important; }
+      .step-card { border: 1px solid #ccc !important; color: black !important; background: white !important; }
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col font-sans antialiased overflow-hidden selection:bg-brand-500 selection:text-white">
+
+  <!-- TOP APP BAR -->
+  <header class="h-16 bg-slate-950 border-b border-slate-800 flex items-center justify-between px-6 z-20 flex-shrink-0">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30 font-bold text-xl">
+        ∑
+      </div>
+      <div>
+        <h1 class="font-bold text-lg text-white leading-tight flex items-center gap-2">
+          Chiziqli Algebra <span class="text-xs px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30">1-Semestr</span>
+        </h1>
+        <p class="text-xs text-slate-400">Bosqichma-bosqich ishlab beruvchi interaktiv tizim</p>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div id="header-actions" class="flex items-center gap-2.5">
+      <button onclick="showSyllabusModal()" class="px-3.5 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition flex items-center gap-1.5 shadow-md shadow-indigo-600/30">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+        Mundarija (15 ta Amaliyot)
+      </button>
+      <button onclick="loadCurrentExample()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium border border-slate-700 transition flex items-center gap-1.5 shadow-sm">
+        <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        Misol yuklash
+      </button>
+      <button onclick="clearCurrentInputs()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium border border-slate-700 transition flex items-center gap-1.5 shadow-sm">
+        <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+        Tozalash
+      </button>
+      <button onclick="window.print()" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 text-sm font-medium border border-slate-700 transition flex items-center gap-1.5 shadow-sm">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+        PDF / Chop etish
+      </button>
+    </div>
+  </header>
+
+  <!-- BODY CONTENT -->
+  <div class="flex-1 flex overflow-hidden">
+    
+    <!-- LEFT SIDEBAR: TOPICS & SYLLABUS -->
+    <aside id="sidebar" class="w-80 bg-slate-950/70 border-r border-slate-800 flex flex-col flex-shrink-0 overflow-hidden">
+      <div class="p-3.5 border-b border-slate-800 flex items-center justify-between bg-slate-950">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-slate-300">Semestr Mundarijasi</span>
+        </div>
+        <button onclick="showSyllabusModal()" class="text-xs font-semibold text-brand-400 hover:text-brand-300 hover:underline flex items-center gap-1">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          To'liq ro'yxat
+        </button>
+      </div>
+
+      <!-- Quick Topic Search Filter -->
+      <div class="p-2.5 border-b border-slate-800/80 bg-slate-950/40">
+        <div class="relative">
+          <input id="sidebar-topic-search" type="text" placeholder="Mavzuni qidirish (Kramer, Gauss, Rang...)" oninput="filterTopics(this.value)" class="w-full bg-slate-900 border border-slate-800 rounded-lg pl-8 pr-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-brand-500 transition">
+          <svg class="w-3.5 h-3.5 text-slate-500 absolute left-2.5 top-2.5 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav id="nav-categories" class="p-3 space-y-4 flex-1 overflow-y-auto">
+        <!-- Dynamically injected categories & topics -->
+      </nav>
+
+      <!-- Student / University Info Footer -->
+      <div class="p-3.5 m-3 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-400">
+        <p class="font-medium text-slate-300">💡 Eslatma:</p>
+        <p class="mt-1">Har bir yechim oraliq hisoblashlar va qadam-baqadam izohlar bilan chiqariladi.</p>
+      </div>
+    </aside>
+
+    <!-- MAIN INTERACTIVE CANVAS -->
+    <main class="flex-1 flex flex-col overflow-y-auto bg-slate-900/60 p-6">
+      
+      <!-- CURRENT TOPIC BANNER -->
+      <div class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-slate-800">
+        <div>
+          <div class="flex items-center gap-2">
+            <span id="topic-badge" class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-500/10 text-brand-400 border border-brand-500/20">
+              5. Chiziqli tenglamalar sistemasi
+            </span>
+            <span id="topic-size-badge" class="text-xs text-slate-400">3x3 Sistema</span>
+          </div>
+          <h2 id="topic-title" class="text-2xl font-bold text-white mt-1">
+            Kramer qoidasi bilan yechish
+          </h2>
+          <p id="topic-desc" class="text-sm text-slate-400 mt-0.5">
+            n noma'lumli tenglamalar sistemasining determinantlarini hisoblash va ildizlarini topish
+          </p>
+        </div>
+
+        <!-- Dim Selector (2x2 dan 10x10 gacha) -->
+        <div id="dim-selector-container" class="flex items-center gap-1.5 bg-slate-950 p-1.5 rounded-xl border border-slate-800 overflow-x-auto max-w-full">
+          <span class="text-xs text-slate-400 font-bold px-1.5 whitespace-nowrap">O'lcham:</span>
+          <div class="flex items-center gap-1 flex-nowrap">
+            <button onclick="setDimension(2)" id="dim-btn-2" class="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">2x2</button>
+            <button onclick="setDimension(3)" id="dim-btn-3" class="px-2 py-1 rounded-lg text-xs font-bold bg-brand-600 text-white transition shadow-sm">3x3</button>
+            <button onclick="setDimension(4)" id="dim-btn-4" class="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">4x4</button>
+            <button onclick="setDimension(5)" id="dim-btn-5" class="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">5x5</button>
+            <button onclick="setDimension(6)" id="dim-btn-6" class="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">6x6</button>
+            <button onclick="setDimension(7)" id="dim-btn-7" class="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">7x7</button>
+            <button onclick="setDimension(8)" id="dim-btn-8" class="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">8x8</button>
+            <button onclick="setDimension(9)" id="dim-btn-9" class="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">9x9</button>
+            <button onclick="setDimension(10)" id="dim-btn-10" class="px-2 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition">10x10</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXERCISE / MISOL CHOOSER -->
+      <div id="exercise-chooser-container" class="mb-6 p-4 rounded-2xl bg-slate-950 border border-slate-800 shadow-md">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-3">
+          <label class="text-xs font-semibold uppercase tracking-wider text-emerald-400 flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+            Qaysi topshiriq va misol (Tanlang yoki yozing):
+          </label>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-400">Tezkor qidirish:</span>
+            <input id="quick-exercise-search" oninput="onExerciseSearchInput(this.value)" placeholder="Masalan: 1 b yoki 2 a" class="px-3 py-1 bg-slate-900 border border-slate-700 rounded-lg text-xs font-bold text-white placeholder-slate-500 outline-none focus:border-brand-500 w-44">
+          </div>
+        </div>
+
+        <!-- Pills of exercises for current amaliyot -->
+        <div id="exercises-pills" class="flex flex-wrap gap-2">
+          <!-- Dynamically populated from EXERCISES_DB -->
+        </div>
+
+        <!-- Active Exercise description badge -->
+        <div id="active-exercise-badge" class="mt-3 p-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-300 flex items-center gap-2 hidden">
+          <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">Topshiriq sharti:</span>
+          <span id="active-exercise-desc" class="font-medium text-white"></span>
+        </div>
+      </div>
+
+      <!-- METHOD CHOOSER (Qaysi yo'lda ishlansin?) -->
+      <div id="method-container" class="mb-6 p-4 rounded-2xl bg-slate-950 border border-slate-800 shadow-md">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-3">
+          <label class="text-xs font-semibold uppercase tracking-wider text-brand-400 flex items-center gap-2">
+            <svg class="w-4 h-4 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Yechish usulini tanlang yoki o'zingiz kiriting:
+          </label>
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-400 font-medium">Foydalanuvchi usuli:</span>
+            <input id="custom-method-input" list="all-methods-datalist" placeholder="Usul nomini yozing (Gauss, Minorlar...)..." oninput="onCustomMethodInput(this.value)" class="px-3 py-1.5 bg-slate-900 border border-brand-500/40 rounded-lg text-xs font-bold text-brand-300 placeholder-slate-500 outline-none focus:border-brand-400 w-72 shadow-inner">
+            <datalist id="all-methods-datalist">
+              <option value="1-satr bo'yicha yoyish">
+              <option value="2-satr bo'yicha yoyish">
+              <option value="2-ustun bo'yicha yoyish">
+              <option value="3-satr bo'yicha yoyish">
+              <option value="A va Aᵀ ko'paytmasi">
+              <option value="Algebraik amallar (qo'shish, ko'paytirish, bo'lish)">
+              <option value="Algebraik to'ldiruvchilar usuli (Birikkan matritsa / Kofaktorlar)">
+              <option value="Algebraning asosiy teoremasi va ildizlar tahlili">
+              <option value="Bezout munosabati (Kengaytirilgan Yevklid algoritmi)">
+              <option value="Bezu teoremasi (f(c) ni topish)">
+              <option value="Bikvadrat va simmetrik tenglamalar usuli">
+              <option value="Blok matritsalar ko'paytmasi">
+              <option value="Blok matritsalar teskarisini topish usuli">
+              <option value="Blok matritsalar usuli">
+              <option value="Boshlang'ich (ibtidoiy) ildizlar usuli">
+              <option value="Burchakli bo'lish (Polynomial Long Division)">
+              <option value="Chiziqli ko'paytuvchilarga ajratish usuli">
+              <option value="Dekart-Eyler usuli">
+              <option value="Determinantlar ko'paytmasi usuli">
+              <option value="Diagonalizatsiya orqali f(A) ni hisoblash">
+              <option value="Diagonalizatsiya usuli (P·D·P⁻¹)">
+              <option value="Diskriminant tahlili">
+              <option value="Eyzenshteyn keltirilmaslik kriteriyasi">
+              <option value="Ferrari usuli (4-darajali tenglamalar)">
+              <option value="Gauss usuli (Noma'lumlarni ketma-ket yo'qotish)">
+              <option value="Gauss usuli (Pog'onasimon ko'rinish)">
+              <option value="Gauss usuli (Uchburchak ko'rinishga keltirish)">
+              <option value="Gauss usulida FYeT bazisini topish">
+              <option value="Geometrik progressiya va yig'indilar usuli">
+              <option value="Geometrik tasvirlash usuli">
+              <option value="Gorner jadvali usuli">
+              <option value="Haddar tahlili va inversiyalar usuli">
+              <option value="Haqiqiy sodda kasrlarga ajratish">
+              <option value="Inversiyalar juftliklarini tahlil qilish">
+              <option value="Jordan-Gauss usuli (Birlashtirilgan [A|E] matritsa)">
+              <option value="Jordan-Gauss usuli ([A|B] reduktsiyalash)">
+              <option value="Kardano formulasi va diskriminant tahlili">
+              <option value="Karrali ildizlar va hosilalar usuli">
+              <option value="Karrali ildizlarni ajratish (f va f' ning EKUBi)">
+              <option value="Keltirilgan kubik tenglama (y³ + py + q = 0)">
+              <option value="Ko'phad darajalari va E birlik matritsa usuli">
+              <option value="Kompleks sodda kasrlarga ajratish">
+              <option value="Kompleks sondan n-darajali barcha ildizlarni topish (ⁿ√z)">
+              <option value="Kompleks tenglamalar va sistemalar usuli">
+              <option value="Kramer qoidasi (Determinantlar orqali)">
+              <option value="Kroneker-Kapelli tekshiruvi (Muvofiqlik tahlili)">
+              <option value="Kvadrat ildiz chiqarish formulasi">
+              <option value="Laplas teoremasi (Satr bo'yicha yoyish)">
+              <option value="Laplas teoremasi (Ustun bo'yicha yoyish)">
+              <option value="Laplas teoremasi (k-tartibli minorlar)">
+              <option value="Matritsa usuli (X = A⁻¹ · B)">
+              <option value="Matritsalarni darajaga ko'tarish usuli">
+              <option value="Matritsaviy tenglamalar umumiy yechimi">
+              <option value="Matritsaviy tenglamani teskari matritsa bilan yechish">
+              <option value="Muavr formulasi bilan darajaga ko'tarish (zⁿ)">
+              <option value="Nazariy isbot usuli">
+              <option value="Noma'lum koeffitsiyentlar usuli">
+              <option value="O'rab turuvchi minorlar usuli (Maksimal noldan farqli minorlar)">
+              <option value="Parametr λ bo'yicha tahlil qilish">
+              <option value="Permutatsiya darajasini topish (Aⁿ)">
+              <option value="Permutatsiyalar ko'paytmasi usuli">
+              <option value="Qoldiqlar bo'yicha ko'phadni tiklash (Xitoy qoldiqlar teoremasi)">
+              <option value="Qutblar (ildizlar) bo'yicha yoyish usuli">
+              <option value="Ratsional ildizlar teoremasi (p/q)">
+              <option value="Rekurrent munosabatlar usuli">
+              <option value="Sarrus qoidasi (3x3)">
+              <option value="Satrlar va ustunlar bo'yicha hisoblash">
+              <option value="Satrni ustunga ko'paytirish">
+              <option value="Sikllarga ajratish usuli">
+              <option value="Standart analitik usul">
+              <option value="Teskari o'rniga qo'yish usuli">
+              <option value="Teylor koeffitsiyentlari usuli">
+              <option value="Trigonometrik (Viet) usuli">
+              <option value="Trigonometrik ko'phadlar va Muavr integratsiyasi">
+              <option value="Trigonometrik shaklga o'tish (r, cos φ + i sin φ)">
+              <option value="Vektorlar erkligi va sistemasi">
+              <option value="Vieta teoremalari va simmetrik funksiyalar">
+              <option value="Yevklid algoritmi qadamlari">
+            </datalist>
+          </div>
+        </div>
+
+        <div id="methods-list" class="flex flex-wrap gap-2.5">
+          <!-- Dynamically populated methods -->
+        </div>
+
+        <!-- Active Method Indicator -->
+        <div class="mt-3 pt-2.5 border-t border-slate-800/80 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-slate-400">Amaldagi yechish usuli:</span>
+            <span id="active-method-indicator" class="px-3 py-1 rounded-full text-xs font-bold bg-brand-500/20 text-brand-300 border border-brand-500/30 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+              <span id="active-method-text">Gauss usuli</span>
+            </span>
+          </div>
+          <span class="text-slate-500 text-[11px]">Barcha matematik usullar to'liq qo'llab-quvvatlanadi</span>
+        </div>
+      </div>
+
+      <!-- INPUT MATRICES / SYSTEM PANEL -->
+      <div id="input-panel" class="mb-6 p-6 rounded-2xl bg-slate-950 border border-slate-800 shadow-lg">
+        <div class="flex items-center justify-between mb-4">
+          <h3 id="input-panel-title" class="text-sm font-semibold text-slate-200 flex items-center gap-2">
+            Matritsa elementlarini yoki koeffitsiyentlarni kiriting:
+          </h3>
+          <span class="text-xs text-slate-500">Kasrlar ham qabul qilinadi (masalan: 3, -5, 1/2)</span>
+        </div>
+
+        <!-- DYNAMIC GRIDS -->
+        <div id="grids-container" class="flex flex-wrap items-center justify-center gap-6 py-2">
+          <!-- Grids will be rendered here -->
+        </div>
+
+        <!-- SOLVE ACTION BUTTON -->
+        <div class="mt-8 flex justify-center">
+          <button onclick="executeSolution()" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-brand-600 via-indigo-600 to-violet-600 hover:from-brand-500 hover:to-violet-500 text-white font-bold text-base shadow-xl shadow-brand-500/25 hover:shadow-brand-500/40 transform hover:-translate-y-0.5 active:translate-y-0 transition flex items-center gap-3">
+            <svg class="w-5 h-5 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Barcha qadamlari bilan ishlab berish
+          </button>
+        </div>
+      </div>
+
+      <!-- SOLUTION & STEP-BY-STEP DISPLAY -->
+      <section id="solution-container" class="space-y-4 pb-12 hidden">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+            To'liq Bosqichma-bosqich Yechim
+          </h3>
+          <span id="solution-timestamp" class="text-xs text-slate-500"></span>
+        </div>
+
+        <!-- RESULT HIGHLIGHT BANNER -->
+        <div id="solution-banner" class="p-4 rounded-xl bg-gradient-to-r from-emerald-950/60 to-slate-900 border border-emerald-500/30 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+              ✓
+            </div>
+            <div>
+              <p class="text-xs uppercase font-semibold text-emerald-400">Yakuniy Natija</p>
+              <div id="final-result-latex" class="text-lg font-bold text-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEPS CARDS LIST -->
+        <div id="steps-list" class="space-y-4">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- SYLLABUS / MUNDARIJA MODAL -->
+  <div id="syllabus-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-3xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl">
+      <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-950">
+        <div>
+          <h3 class="font-bold text-lg text-white">Semestr Mavzulari Mundarijasi</h3>
+          <p class="text-xs text-slate-400">Chiziqli algebra va analitik geometriya fani sillabusi</p>
+        </div>
+        <button onclick="hideSyllabusModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800 transition">
+          ✕
+        </button>
+      </div>
+      <div id="syllabus-content" class="p-6 overflow-y-auto space-y-4 flex-1">
+        <!-- Injected from syllabus.json -->
+      </div>
+      <div class="p-4 border-t border-slate-800 bg-slate-950 flex justify-end">
+        <button onclick="hideSyllabusModal()" class="px-5 py-2 rounded-xl bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold transition">
+          Tushunarli
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOAD APPLICATION SCRIPTS -->
+  <script src="syllabus_data.js"></script>
+  <script src="exercises_db.js"></script>
+  <script src="app.js"></script>
+
+  <!-- CONTROLLER SCRIPT -->
+  <script>
+    // State management
+    let syllabusData = (typeof SYLLABUS_DATA !== 'undefined' ? SYLLABUS_DATA : null);
+    let currentCategoryId = 'amaliy_6';
+    let currentTopicId = 'slae_calc';
+    let currentMethod = 'Kramer qoidasi (Determinantlar orqali)';
+    let currentDim = 3;
+    let currentRows = 3;
+    let currentCols = 3;
+    let currentExerciseId = null;
+
+    // Preset Examples for rapid testing
+    const PRESETS = {
+      matrix_ops: {
+        2: { A: [[2, -1], [3, 4]], B: [[1, 5], [-2, 3]], op: 'add' },
+        3: { A: [[1, 2, -1], [0, 3, 4], [2, -1, 1]], B: [[2, -1, 3], [1, 0, -2], [3, 4, 1]], op: 'add' },
+        4: { A: [[1,0,2,-1],[2,3,-1,0],[0,1,1,2],[3,-1,0,1]], B: [[2,1,-1,0],[0,2,1,-1],[1,0,3,2],[-1,1,2,0]], op: 'add' }
+      },
+      matrix_mult: {
+        2: { A: [[2, 1], [-1, 3]], B: [[3, -2], [4, 1]] },
+        3: { A: [[1, 2, 3], [0, 1, 4], [5, 6, 0]], B: [[2, 0, -1], [1, 3, 2], [0, -2, 1]] },
+        4: { A: [[1,2,0,1],[0,1,-1,2],[2,0,1,3],[1,-1,2,0]], B: [[1,0,2,-1],[2,1,0,3],[0,-1,1,2],[3,2,1,0]] }
+      },
+      det_calc: {
+        2: { A: [[4, 2], [3, 5]] },
+        3: { A: [[2, 3, 1], [4, -1, 2], [3, 2, 4]] },
+        4: { A: [[2, 1, 0, 3], [1, 3, 2, 0], [0, 2, 1, 4], [3, 0, 2, 1]] }
+      },
+      inv_calc: {
+        2: { A: [[3, 5], [1, 2]] },
+        3: { A: [[2, 5, 7], [6, 3, 4], [5, -2, -3]] },
+        4: { A: [[1, 1, 1, 1], [1, 2, 3, 4], [1, 3, 6, 10], [1, 4, 10, 20]] }
+      },
+      rank_calc: {
+        2: { A: [[1, 2], [2, 4]] },
+        3: { A: [[1, 2, 3], [2, 4, 6], [3, 6, 9]] },
+        4: { A: [[1, 2, 3, 4], [2, 4, 6, 8], [3, 5, 7, 9], [1, 1, 1, 1]] }
+      },
+      slae_calc: {
+        2: { A: [[2, 3], [4, -1]], B: [8, 2] },
+        3: { A: [[2, 1, 1], [1, -1, 2], [3, 2, -1]], B: [4, 5, 1] },
+        4: { A: [[1, 1, 1, 1], [2, 1, -1, 2], [3, 2, 1, -1], [1, -1, 2, 3]], B: [10, 5, 4, 11] }
+      },
+      vector_ops: {
+        3: { a: [2, 3, -1], b: [1, -2, 4], c: [3, 1, 2] }
+      },
+      eigen_calc: {
+        2: { A: [[4, 2], [1, 3]] },
+        3: { A: [[3, -1, 0], [-1, 2, -1], [0, -1, 3]] }
+      },
+      matrix_aat: {
+        2: { A: [[3, 2, 1, 2], [4, 1, 1, 3]] },
+        3: { A: [[1, 2, -1], [3, 0, 2], [1, 1, 4]] },
+        4: { A: [[1, 0, 2, -1], [2, 1, 0, 3], [0, 1, 1, 2], [3, -1, 0, 1]] }
+      },
+      matrix_poly: {
+        3: { A: [[2, 1, 0], [0, 2, 0], [1, 1, 1]], polyStr: "x^3 - 2x^2 + 1", coeffs: [1, 0, -2, 1] },
+        2: { A: [[1, 2], [3, 4]], polyStr: "x^2 - 5x - 2", coeffs: [-2, -5, 1] }
+      },
+      perm_inversions: {
+        3: { perm: "3 1 4 2 5" },
+        2: { perm: "2 1" },
+        4: { perm: "4 2 3 1" }
+      },
+      minors_cofactors: {
+        3: { A: [[2, -3, 4], [4, -2, 3], [3, -1, 4]] },
+        2: { A: [[4, 2], [3, 5]] },
+        4: { A: [[2, -3, 4, 1], [4, -2, 3, 2], [1, 2, 3, 4], [3, -1, 4, 3]] }
+      },
+      homo_slae: {
+        3: { A: [[1, 2, -1], [2, 1, 1], [3, 3, 0]] },
+        2: { A: [[1, 2], [2, 4]] },
+        4: { A: [[1, -2, 1, 3], [2, -4, 2, 6], [1, 1, 1, 1], [2, -1, 2, 4]] }
+      },
+      complex_ops: {
+        3: { a1: 2, b1: 3, a2: 1, b2: -2 }
+      },
+      demoivre_calc: {
+        3: { a: 1, b: 1, power: 4, rootN: 3 }
+      },
+      poly_div: {
+        3: { f: "2 -3 4 -5 6", g: "1 -3 1" }
+      },
+      poly_gcd: {
+        3: { f: "1 1 -3 -4 -1", g: "1 1 -1 -1" }
+      },
+      horner_scheme: {
+        3: { coeffs: "2 -6 2 -1", c: 3 }
+      },
+      cardano_cubic: {
+        3: { a: 1, b: 0, c: -6, d: -9 }
+      }
+    };
+
+    // Initialize application
+    async function initApp() {
+      if (!syllabusData && typeof SYLLABUS_DATA !== 'undefined') {
+        syllabusData = SYLLABUS_DATA;
+      }
+      if (!syllabusData) {
+        try {
+          const res = await fetch('syllabus.json');
+          syllabusData = await res.json();
+        } catch (e) {
+          console.error("Local syllabus load error, fallback to memory", e);
+        }
+      }
+      renderNavigation();
+      selectTopic('slae_calc');
+    }
+
+    // Render left navigation with optional filter
+    function renderNavigation(filterQuery = '') {
+      const nav = document.getElementById('nav-categories');
+      if (!nav) return;
+      nav.innerHTML = '';
+
+      const data = syllabusData || (typeof SYLLABUS_DATA !== 'undefined' ? SYLLABUS_DATA : null);
+      if (!data || !data.categories) return;
+
+      const q = filterQuery.trim().toLowerCase();
+
+      data.categories.forEach(cat => {
+        const filteredTopics = q
+          ? cat.topics.filter(t => t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q) || cat.title.toLowerCase().includes(q))
+          : cat.topics;
+
+        if (filteredTopics.length === 0) return;
+
+        const catBox = document.createElement('div');
+        catBox.className = 'space-y-1.5 mb-3';
+
+        const catTitle = document.createElement('div');
+        catTitle.className = 'px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-indigo-400 bg-slate-900/60 rounded-lg border border-slate-800/80 flex items-center justify-between';
+        catTitle.innerHTML = `<span class="truncate">${cat.title}</span>`;
+        catBox.appendChild(catTitle);
+
+        filteredTopics.forEach(t => {
+          const btn = document.createElement('button');
+          btn.id = `nav-topic-${t.id}`;
+          btn.onclick = () => selectTopic(t.id);
+          const isActive = (t.id === currentTopicId);
+          btn.className = `w-full text-left px-3 py-2 rounded-xl text-xs font-medium transition flex items-center justify-between group ${
+            isActive 
+              ? 'bg-brand-600/20 text-brand-300 border border-brand-500/30' 
+              : 'text-slate-300 hover:bg-slate-800/80 hover:text-white'
+          }`;
+          btn.innerHTML = `
+            <span class="truncate pr-2">${t.name}</span>
+            <span class="w-1.5 h-1.5 rounded-full flex-shrink-0 ${isActive ? 'bg-brand-400' : 'bg-transparent group-hover:bg-slate-500'}"></span>
+          `;
+          catBox.appendChild(btn);
+        });
+
+        nav.appendChild(catBox);
+      });
+    }
+
+    function filterTopics(q) {
+      renderNavigation(q);
+    }
+
+    // Select topic
+    function selectTopic(topicId) {
+      currentTopicId = topicId;
+
+      // Update active nav styles
+      document.querySelectorAll('#nav-categories button').forEach(b => {
+        b.className = b.className.replace('bg-brand-600/20 text-brand-300 border border-brand-500/30', 'text-slate-300 hover:bg-slate-800/80 hover:text-white');
+        const dot = b.querySelector('span:last-child');
+        if (dot) dot.className = 'w-1.5 h-1.5 rounded-full bg-transparent group-hover:bg-slate-500';
+      });
+      const activeBtn = document.getElementById(`nav-topic-${topicId}`);
+      if (activeBtn) {
+        activeBtn.className = activeBtn.className.replace('text-slate-300 hover:bg-slate-800/80 hover:text-white', 'bg-brand-600/20 text-brand-300 border border-brand-500/30');
+        const dot = activeBtn.querySelector('span:last-child');
+        if (dot) dot.className = 'w-1.5 h-1.5 rounded-full bg-brand-400';
+      }
+
+      // Find topic details
+      const data = syllabusData || (typeof SYLLABUS_DATA !== 'undefined' ? SYLLABUS_DATA : null);
+      if (!data || !data.categories) return;
+
+      let foundTopic = null;
+      let foundCat = null;
+      for (const cat of data.categories) {
+        for (const t of cat.topics) {
+          if (t.id === topicId) {
+            foundTopic = t;
+            foundCat = cat;
+            break;
+          }
+        }
+        if (foundTopic) break;
+      }
+
+      if (!foundTopic) return;
+
+      currentCategoryId = foundCat.id;
+      document.getElementById('topic-badge').textContent = foundCat.title;
+      document.getElementById('topic-title').textContent = foundTopic.name;
+      document.getElementById('topic-desc').textContent = foundTopic.desc;
+
+      // Render Methods list
+      const methodsList = document.getElementById('methods-list');
+      methodsList.innerHTML = '';
+      currentMethod = foundTopic.methods[0] || '';
+      const methodIndicator = document.getElementById('active-method-text');
+      if (methodIndicator) methodIndicator.textContent = currentMethod;
+      const customInp = document.getElementById('custom-method-input');
+      if (customInp) customInp.value = currentMethod;
+
+      foundTopic.methods.forEach((m, idx) => {
+        const mBtn = document.createElement('button');
+        mBtn.className = `px-4 py-2 rounded-xl text-xs font-semibold transition border ${
+          idx === 0 
+            ? 'bg-brand-600 text-white border-brand-500 shadow-md shadow-brand-600/20' 
+            : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 hover:text-white'
+        }`;
+        mBtn.textContent = m;
+        mBtn.onclick = () => setActiveMethod(m);
+        methodsList.appendChild(mBtn);
+      });
+
+      // Show/Hide Dim selector based on topic
+      const dimContainer = document.getElementById('dim-selector-container');
+      const nonDimTopics = ['vector_ops', 'perm_inversions', 'complex_ops', 'demoivre_calc', 'poly_div', 'poly_gcd', 'horner_scheme', 'cardano_cubic', 'partial_fractions'];
+      if (nonDimTopics.includes(topicId)) {
+        dimContainer.classList.add('hidden');
+      } else {
+        dimContainer.classList.remove('hidden');
+      }
+
+      renderGrids();
+      renderExerciseChooser(foundCat.id);
+      loadCurrentExample();
+      document.getElementById('solution-container').classList.add('hidden');
+    }
+
+    // Exercise chooser functions
+    function renderExerciseChooser(catId) {
+      currentCategoryId = catId;
+      const container = document.getElementById('exercise-chooser-container');
+      const pillsContainer = document.getElementById('exercises-pills');
+      const searchInput = document.getElementById('quick-exercise-search');
+      if (searchInput) searchInput.value = '';
+
+      pillsContainer.innerHTML = '';
+      currentExerciseId = null;
+      document.getElementById('active-exercise-badge').classList.add('hidden');
+
+      const exList = (window.EXERCISES_DB && window.EXERCISES_DB[catId]) ? window.EXERCISES_DB[catId] : [];
+      if (exList.length === 0) {
+        container.classList.add('hidden');
+        return;
+      }
+
+      container.classList.remove('hidden');
+
+      exList.forEach((ex, idx) => {
+        const pill = document.createElement('button');
+        pill.id = `pill-ex-${ex.id}`;
+        pill.onclick = () => selectExercise(ex.id);
+        pill.className = `px-3 py-1.5 rounded-lg text-xs font-semibold transition border flex items-center gap-1.5 ${
+          idx === 0 
+            ? 'bg-emerald-600 text-white border-emerald-500 shadow-sm'
+            : 'bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 hover:text-white'
+        }`;
+        pill.innerHTML = `<span>${ex.label}</span>`;
+        pillsContainer.appendChild(pill);
+      });
+
+      if (exList.length > 0) {
+        selectExercise(exList[0].id, false);
+      }
+    }
+
+    function selectExercise(exId, updateTopicIfDiff = true) {
+      currentExerciseId = exId;
+      const exList = (window.EXERCISES_DB && window.EXERCISES_DB[currentCategoryId]) ? window.EXERCISES_DB[currentCategoryId] : [];
+      const ex = exList.find(e => e.id === exId);
+      if (!ex) return;
+
+      document.querySelectorAll('#exercises-pills button').forEach(b => {
+        b.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 hover:text-white';
+      });
+      const activePill = document.getElementById(`pill-ex-${exId}`);
+      if (activePill) {
+        activePill.className = 'px-3 py-1.5 rounded-lg text-xs font-semibold transition border bg-emerald-600 text-white border-emerald-500 shadow-sm';
+      }
+
+      const badge = document.getElementById('active-exercise-badge');
+      const descEl = document.getElementById('active-exercise-desc');
+      if (badge && descEl) {
+        descEl.textContent = ex.desc;
+        badge.classList.remove('hidden');
+      }
+
+      if (ex.data) {
+        if (ex.data.rows && ex.data.cols) {
+          currentRows = ex.data.rows;
+          currentCols = ex.data.cols;
+          currentDim = Math.max(ex.data.rows, ex.data.cols);
+        } else if (ex.data.A && Array.isArray(ex.data.A)) {
+          currentRows = ex.data.A.length;
+          currentCols = ex.data.A[0] ? ex.data.A[0].length : currentRows;
+          currentDim = Math.max(currentRows, currentCols);
+        } else if (ex.data.dim) {
+          currentRows = ex.data.dim;
+          currentCols = ex.data.dim;
+          currentDim = ex.data.dim;
+        }
+      }
+
+      if (updateTopicIfDiff && ex.topic && ex.topic !== currentTopicId) {
+        currentTopicId = ex.topic;
+      }
+
+      renderGrids();
+      populateExerciseData(ex.data);
+
+      if (ex.preferredMethod) {
+        setActiveMethod(ex.preferredMethod);
+      }
+
+      document.getElementById('solution-container').classList.add('hidden');
+    }
+
+    function getActiveExercise() {
+      const exList = (window.EXERCISES_DB && window.EXERCISES_DB[currentCategoryId]) ? window.EXERCISES_DB[currentCategoryId] : [];
+      return exList.find(e => e.id === currentExerciseId);
+    }
+
+    function onCustomMethodInput(val) {
+      if (!val || !val.trim()) return;
+      setActiveMethod(val.trim());
+    }
+
+    function setActiveMethod(methodName) {
+      currentMethod = methodName;
+      const indicator = document.getElementById('active-method-text');
+      if (indicator) indicator.textContent = methodName;
+      const customInp = document.getElementById('custom-method-input');
+      if (customInp && customInp.value !== methodName && !customInp.matches(':focus')) {
+        customInp.value = methodName;
+      }
+
+      document.querySelectorAll('#methods-list button').forEach(b => {
+        const text = b.textContent.trim().toLowerCase();
+        const target = methodName.trim().toLowerCase();
+        if (text === target || text.includes(target) || target.includes(text)) {
+          b.className = 'px-4 py-2 rounded-xl text-xs font-semibold transition border bg-brand-600 text-white border-brand-500 shadow-md shadow-brand-600/20';
+        } else {
+          b.className = 'px-4 py-2 rounded-xl text-xs font-semibold transition border bg-slate-900 text-slate-300 border-slate-800 hover:border-slate-700 hover:text-white';
+        }
+      });
+    }
+
+    function populateExerciseData(data) {
+      if (!data) return;
+
+      if (data.A) {
+        for (let r = 0; r < data.A.length; r++) {
+          for (let c = 0; c < data.A[r].length; c++) {
+            const el = document.getElementById(`A_${r}_${c}`);
+            if (el) el.value = data.A[r][c];
+          }
+        }
+      }
+      if (data.B) {
+        if (Array.isArray(data.B[0])) {
+          for (let r = 0; r < data.B.length; r++) {
+            for (let c = 0; c < data.B[r].length; c++) {
+              const el = document.getElementById(`B_${r}_${c}`);
+              if (el) el.value = data.B[r][c];
+            }
+          }
+        } else {
+          for (let i = 0; i < data.B.length; i++) {
+            const el = document.getElementById(`B_${i}`);
+            if (el) el.value = data.B[i];
+          }
+        }
+      }
+      if (data.op) {
+        const opSel = document.getElementById('matrix-op-select');
+        if (opSel) {
+          opSel.value = data.op;
+          onMatrixOpChange();
+        }
+      }
+      if (data.polyStr) {
+        const polyInp = document.getElementById('poly-input-str');
+        if (polyInp) polyInp.value = data.polyStr;
+      }
+      if (data.perm) {
+        const inp = document.getElementById('perm-input');
+        if (inp) inp.value = data.perm;
+      }
+      if (data.a1 !== undefined) {
+        const z1a = document.getElementById('z1_a'); if (z1a) z1a.value = data.a1;
+        const z1b = document.getElementById('z1_b'); if (z1b) z1b.value = data.b1;
+        const z2a = document.getElementById('z2_a'); if (z2a) z2a.value = data.a2;
+        const z2b = document.getElementById('z2_b'); if (z2b) z2b.value = data.b2;
+      }
+      if (data.power !== undefined) {
+        const ma = document.getElementById('moivre_a'); if (ma) ma.value = data.a;
+        const mb = document.getElementById('moivre_b'); if (mb) mb.value = data.b;
+        const mn = document.getElementById('moivre_n'); if (mn) mn.value = data.power;
+        const mr = document.getElementById('moivre_root_deg'); if (mr) mr.value = data.rootN;
+      }
+      if (data.f !== undefined) {
+        const pf = document.getElementById('poly_f'); if (pf) pf.value = data.f;
+        const pg = document.getElementById('poly_g'); if (pg) pg.value = data.g;
+      }
+      if (data.coeffs !== undefined) {
+        const hp = document.getElementById('horner_poly'); if (hp) hp.value = data.coeffs;
+        const hc = document.getElementById('horner_c'); if (hc) hc.value = data.c;
+      }
+      if (data.a !== undefined && data.d !== undefined) {
+        const ca = document.getElementById('cardano_a'); if (ca) ca.value = data.a;
+        const cb = document.getElementById('cardano_b'); if (cb) cb.value = data.b;
+        const cc = document.getElementById('cardano_c'); if (cc) cc.value = data.c;
+        const cd = document.getElementById('cardano_d'); if (cd) cd.value = data.d;
+      }
+      if (data.num !== undefined) {
+        const fn = document.getElementById('fraction_num'); if (fn) fn.value = data.num;
+        const fd = document.getElementById('fraction_den'); if (fd) fd.value = data.den;
+      }
+      if (data.row !== undefined) {
+        const rSel = document.getElementById('minors-row-select');
+        if (rSel) rSel.value = data.row;
+      }
+    }
+
+    function onExerciseSearchInput(val) {
+      if (!val || !val.trim()) return;
+      const str = val.toLowerCase().trim();
+      const exList = (window.EXERCISES_DB && window.EXERCISES_DB[currentCategoryId]) ? window.EXERCISES_DB[currentCategoryId] : [];
+      if (exList.length === 0) return;
+
+      // 1. Direct label contains
+      let found = exList.find(e => e.label.toLowerCase().includes(str));
+      
+      // 2. Extract task number and letter (e.g. "1-topshiriq a", "1 a", "1b", "topshiriq 1, b)")
+      if (!found) {
+        const numMatch = str.match(/\b(\d+)\b/);
+        const letterMatch = str.match(/\b([a-z])\b|[\s\-_]([a-z])(?:\)|$|\s)/);
+        const reqNum = numMatch ? numMatch[1] : null;
+        const reqLetter = letterMatch ? (letterMatch[1] || letterMatch[2]) : null;
+
+        if (reqNum && reqLetter) {
+          found = exList.find(e => e.taskNo === reqNum && e.letter === reqLetter);
+        }
+        if (!found && reqNum && !reqLetter) {
+          found = exList.find(e => e.taskNo === reqNum);
+        }
+        if (!found && !reqNum && reqLetter) {
+          found = exList.find(e => e.letter === reqLetter);
+        }
+      }
+
+      // 3. Normalized alphanumeric search
+      if (!found) {
+        const cleanInput = str.replace(/[^a-z0-9]/g, '');
+        found = exList.find(e => {
+          const eNorm = (e.taskNo + (e.letter || '')).toLowerCase();
+          const eClean = e.id.toLowerCase().replace(/[^a-z0-9]/g, '');
+          return cleanInput.includes(eNorm) || eNorm.includes(cleanInput) || eClean.includes(cleanInput);
+        });
+      }
+
+      if (found) {
+        selectExercise(found.id);
+      }
+    }
+
+    // Set matrix dimension (2 dan 10 gacha)
+    function setDimension(dim) {
+      dim = Math.max(2, Math.min(10, parseInt(dim) || 3));
+      currentDim = dim;
+      currentRows = dim;
+      currentCols = dim;
+      for (let d = 2; d <= 10; d++) {
+        const btn = document.getElementById(`dim-btn-${d}`);
+        if (btn) {
+          if (d === dim) {
+            btn.className = 'px-2.5 py-1 rounded-lg text-xs font-bold bg-brand-600 text-white transition shadow-sm';
+          } else {
+            btn.className = 'px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-800 text-slate-300 hover:text-white transition';
+          }
+        }
+      }
+      const badge = document.getElementById('topic-size-badge');
+      if (badge) badge.textContent = `${dim}x${dim} Matritsa`;
+      renderGrids();
+      loadCurrentExample();
+    }
+
+    // Render Input Grids based on current topic and dimension
+    function renderGrids() {
+      const container = document.getElementById('grids-container');
+      container.innerHTML = '';
+      const dim = currentDim;
+
+      if (currentTopicId === 'matrix_ops') {
+        // Matrix A, Operation Selector (+, -, *k, A^T), Matrix B
+        const wrapA = createMatrixGridWrap('A Matritsa', 'A', dim, dim);
+        
+        const opBox = document.createElement('div');
+        opBox.className = 'flex flex-col items-center justify-center gap-2 px-2';
+        opBox.innerHTML = `
+          <label class="text-xs text-slate-400 font-medium">Amal:</label>
+          <select id="matrix-op-select" onchange="onMatrixOpChange()" class="bg-slate-900 border border-slate-700 text-white text-sm rounded-lg p-2 font-bold focus:border-brand-500 outline-none">
+            <option value="add">A + B (Qo'shish)</option>
+            <option value="sub">A - B (Ayirish)</option>
+            <option value="scalar">k · A (Songa ko'paytirish)</option>
+            <option value="transpose">Aᵀ (Transponirlash)</option>
+          </select>
+          <div id="scalar-input-wrap" class="hidden flex items-center gap-2 mt-2">
+            <span class="text-xs text-slate-400">k =</span>
+            <input id="scalar-k-input" type="text" value="3" class="w-14 h-9 bg-slate-900 border border-slate-700 text-center rounded-lg text-white font-bold">
+          </div>
+        `;
+
+        const wrapB = createMatrixGridWrap('B Matritsa', 'B', dim, dim);
+        wrapB.id = 'matrix-b-wrap';
+
+        container.appendChild(wrapA);
+        container.appendChild(opBox);
+        container.appendChild(wrapB);
+      } 
+      else if (currentTopicId === 'matrix_mult') {
+        const wrapA = createMatrixGridWrap('A Matritsa', 'A', dim, dim);
+        const multSign = document.createElement('div');
+        multSign.className = 'text-2xl font-bold text-brand-400 self-center';
+        multSign.innerHTML = '×';
+        const wrapB = createMatrixGridWrap('B Matritsa', 'B', dim, dim);
+        container.appendChild(wrapA);
+        container.appendChild(multSign);
+        container.appendChild(wrapB);
+      }
+      else if (currentTopicId === 'rank_calc') {
+        const rows = currentRows || dim;
+        const cols = currentCols || dim;
+        const wrapA = createMatrixGridWrap('A Matritsa', 'A', rows, cols);
+        container.appendChild(wrapA);
+      }
+      else if (currentTopicId === 'det_calc' || currentTopicId === 'inv_calc' || currentTopicId === 'eigen_calc' || currentTopicId === 'matrix_aat') {
+        const rows = currentRows || dim;
+        const cols = (currentTopicId === 'matrix_aat' && dim === 2) ? 4 : (currentCols || dim);
+        const wrapA = createMatrixGridWrap(currentTopicId === 'matrix_aat' ? `A Matritsa (${dim}x${cols})` : 'A Matritsa', 'A', rows, cols);
+        container.appendChild(wrapA);
+      }
+      else if (currentTopicId === 'matrix_poly') {
+        const wrapA = createMatrixGridWrap('A Matritsa', 'A', dim, dim);
+        const polyBox = document.createElement('div');
+        polyBox.className = 'flex flex-col items-center justify-center gap-2 p-3 bg-slate-900 border border-slate-800 rounded-xl';
+        polyBox.innerHTML = `
+          <label class="text-xs text-slate-400 font-semibold">f(x) Ko'phad formulasi:</label>
+          <input id="poly-input-str" type="text" value="x^3 - 2x^2 + 1" class="px-3 py-2 bg-slate-950 border border-slate-700 text-brand-300 font-bold text-sm rounded-lg text-center w-52 outline-none focus:border-brand-500">
+          <span class="text-xs text-slate-500">Amaliy 1, 9-misol namunasi</span>
+        `;
+        container.appendChild(wrapA);
+        container.appendChild(polyBox);
+      }
+      else if (currentTopicId === 'slae_calc') {
+        // System of Linear Equations: A and B
+        const sysWrap = document.createElement('div');
+        sysWrap.className = 'flex items-center gap-4 flex-wrap justify-center';
+
+        const aWrap = createMatrixGridWrap('A Koeffitsiyentlar Matritsasi', 'A', dim, dim);
+        
+        const multSign = document.createElement('div');
+        multSign.className = 'flex flex-col items-center justify-center';
+        multSign.innerHTML = `
+          <span class="text-xs text-slate-400 mb-1">Noma'lumlar</span>
+          <div class="flex flex-col gap-2 p-2 bg-slate-900 border border-slate-800 rounded-lg">
+            ${Array.from({length: dim}, (_, i) => `<div class="w-10 h-10 flex items-center justify-center font-bold text-brand-400">x<sub>${i+1}</sub></div>`).join('')}
+          </div>
+        `;
+
+        const eqSign = document.createElement('div');
+        eqSign.className = 'text-2xl font-bold text-slate-400 self-center';
+        eqSign.innerHTML = '=';
+
+        const bWrap = createVectorGridWrap('B Ozod Hadlar', 'B', dim);
+
+        sysWrap.appendChild(aWrap);
+        sysWrap.appendChild(multSign);
+        sysWrap.appendChild(eqSign);
+        sysWrap.appendChild(bWrap);
+        container.appendChild(sysWrap);
+      }
+      else if (currentTopicId === 'vector_ops') {
+        const wrapA = createVectorGridWrap('a⃗ Vektori (x, y, z)', 'vec_a', 3);
+        const wrapB = createVectorGridWrap('b⃗ Vektori (x, y, z)', 'vec_b', 3);
+        const wrapC = createVectorGridWrap('c⃗ Vektori (Aralash ko\'paytma uchun)', 'vec_c', 3);
+        container.appendChild(wrapA);
+        container.appendChild(wrapB);
+        container.appendChild(wrapC);
+      }
+      else if (currentTopicId === 'perm_inversions') {
+        const box = document.createElement('div');
+        box.className = 'flex flex-col items-center gap-3 p-4 bg-slate-900 border border-slate-800 rounded-xl';
+        box.innerHTML = `
+          <label class="text-xs text-slate-400 font-semibold">O'rin almashtirish elementlarini bo'sh joy bilan kiriting:</label>
+          <input id="perm-input" type="text" value="3 1 4 2 5" class="px-4 py-2.5 bg-slate-950 border border-slate-700 text-brand-300 font-bold text-base rounded-xl text-center w-72 outline-none focus:border-brand-500">
+          <span class="text-xs text-slate-500">Amaliy 2 namunasi: 3 1 4 2 5 yoki 4 2 3 1</span>
+        `;
+        container.appendChild(box);
+      }
+      else if (currentTopicId === 'minors_cofactors') {
+        const wrapA = createMatrixGridWrap('A Matritsa', 'A', dim, dim);
+        const selBox = document.createElement('div');
+        selBox.className = 'flex flex-col items-center gap-2 p-3 bg-slate-900 border border-slate-800 rounded-xl';
+        selBox.innerHTML = `
+          <label class="text-xs text-slate-400 font-semibold">Qaysi qator bo'yicha yoyilsin:</label>
+          <select id="minors-row-select" class="bg-slate-950 border border-slate-700 text-white font-bold text-sm p-2 rounded-lg">
+            ${Array.from({length: dim}, (_, i) => `<option value="${i}">${i+1}-qator bo'yicha yoyish</option>`).join('')}
+          </select>
+        `;
+        container.appendChild(wrapA);
+        container.appendChild(selBox);
+      }
+      else if (currentTopicId === 'homo_slae') {
+        const wrapA = createMatrixGridWrap('A Koeffitsiyentlar Matritsasi (AX = 0)', 'A', dim, dim);
+        container.appendChild(wrapA);
+      }
+      else if (currentTopicId === 'complex_ops') {
+        const box = document.createElement('div');
+        box.className = 'flex flex-wrap items-center justify-center gap-6 p-4 bg-slate-900 border border-slate-800 rounded-xl';
+        box.innerHTML = `
+          <div class="flex flex-col items-center gap-2">
+            <span class="text-xs text-slate-400 font-bold">z₁ = a₁ + b₁i</span>
+            <div class="flex items-center gap-1">
+              <input id="z1_a" type="text" value="2" class="matrix-input">
+              <span class="text-white font-bold">+</span>
+              <input id="z1_b" type="text" value="3" class="matrix-input">
+              <span class="text-brand-400 font-bold text-lg">i</span>
+            </div>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <span class="text-xs text-slate-400 font-bold">z₂ = a₂ + b₂i</span>
+            <div class="flex items-center gap-1">
+              <input id="z2_a" type="text" value="1" class="matrix-input">
+              <span class="text-white font-bold">+</span>
+              <input id="z2_b" type="text" value="-2" class="matrix-input">
+              <span class="text-brand-400 font-bold text-lg">i</span>
+            </div>
+          </div>
+        `;
+        container.appendChild(box);
+      }
+      else if (currentTopicId === 'demoivre_calc') {
+        const box = document.createElement('div');
+        box.className = 'flex flex-col items-center gap-4 p-4 bg-slate-900 border border-slate-800 rounded-xl';
+        box.innerHTML = `
+          <div class="flex items-center gap-2">
+            <span class="text-xs text-slate-400 font-bold">z =</span>
+            <input id="moivre_a" type="text" value="1" class="matrix-input">
+            <span class="text-white font-bold">+</span>
+            <input id="moivre_b" type="text" value="1" class="matrix-input">
+            <span class="text-brand-400 font-bold text-lg">i</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="flex items-center gap-1">
+              <span class="text-xs text-slate-400">Daraja (n):</span>
+              <input id="moivre_n" type="text" value="4" class="w-14 h-9 bg-slate-950 border border-slate-700 text-center font-bold text-white rounded-lg">
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="text-xs text-slate-400">Ildiz darajasi:</span>
+              <input id="moivre_root_deg" type="text" value="3" class="w-14 h-9 bg-slate-950 border border-slate-700 text-center font-bold text-white rounded-lg">
+            </div>
+          </div>
+        `;
+        container.appendChild(box);
+      }
+      else if (currentTopicId === 'poly_div' || currentTopicId === 'poly_gcd') {
+        const box = document.createElement('div');
+        box.className = 'flex flex-col items-center gap-3 p-4 bg-slate-900 border border-slate-800 rounded-xl w-full max-w-xl';
+        box.innerHTML = `
+          <div class="w-full">
+            <label class="text-xs text-slate-400 font-semibold block mb-1">f(x) koeffitsiyentlari (katta darajadan boshlab, bo'sh joy bilan):</label>
+            <input id="poly_f" type="text" value="2 -3 4 -5 6" class="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-brand-300 font-bold text-sm">
+            <span class="text-[11px] text-slate-500">Amaliy 11 namunasi: 2x⁴ - 3x³ + 4x² - 5x + 6 uchun: 2 -3 4 -5 6</span>
+          </div>
+          <div class="w-full">
+            <label class="text-xs text-slate-400 font-semibold block mb-1">g(x) koeffitsiyentlari:</label>
+            <input id="poly_g" type="text" value="1 -3 1" class="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-brand-300 font-bold text-sm">
+            <span class="text-[11px] text-slate-500">x² - 3x + 1 uchun: 1 -3 1</span>
+          </div>
+        `;
+        container.appendChild(box);
+      }
+      else if (currentTopicId === 'horner_scheme') {
+        const box = document.createElement('div');
+        box.className = 'flex flex-col items-center gap-3 p-4 bg-slate-900 border border-slate-800 rounded-xl w-full max-w-lg';
+        box.innerHTML = `
+          <div class="w-full">
+            <label class="text-xs text-slate-400 font-semibold block mb-1">f(x) koeffitsiyentlari:</label>
+            <input id="horner_poly" type="text" value="2 -6 2 -1" class="w-full px-3 py-2 bg-slate-950 border border-slate-700 rounded-lg text-brand-300 font-bold text-sm">
+          </div>
+          <div class="flex items-center gap-2">
+            <label class="text-xs text-slate-400 font-semibold">Bo'luvchi c qiymati (x - c):</label>
+            <input id="horner_c" type="text" value="3" class="w-16 h-9 bg-slate-950 border border-slate-700 text-center font-bold text-white rounded-lg">
+          </div>
+        `;
+        container.appendChild(box);
+      }
+      else if (currentTopicId === 'cardano_cubic') {
+        const box = document.createElement('div');
+        box.className = 'flex flex-col items-center gap-3 p-4 bg-slate-900 border border-slate-800 rounded-xl';
+        box.innerHTML = `
+          <span class="text-xs text-slate-400 font-bold mb-1">ax³ + bx² + cx + d = 0 tenglama koeffitsiyentlari:</span>
+          <div class="flex items-center gap-2 flex-wrap justify-center">
+            <div class="flex items-center gap-1"><span class="text-xs text-slate-400">a =</span><input id="cardano_a" type="text" value="1" class="matrix-input"></div>
+            <div class="flex items-center gap-1"><span class="text-xs text-slate-400">b =</span><input id="cardano_b" type="text" value="0" class="matrix-input"></div>
+            <div class="flex items-center gap-1"><span class="text-xs text-slate-400">c =</span><input id="cardano_c" type="text" value="-6" class="matrix-input"></div>
+            <div class="flex items-center gap-1"><span class="text-xs text-slate-400">d =</span><input id="cardano_d" type="text" value="-9" class="matrix-input"></div>
+          </div>
+        `;
+        container.appendChild(box);
+      }
+      else if (currentTopicId === 'partial_fractions') {
+        const box = document.createElement('div');
+        box.className = 'flex flex-col items-center gap-3 p-4 bg-slate-900 border border-slate-800 rounded-xl max-w-xl w-full';
+        box.innerHTML = `
+          <span class="text-xs text-slate-400 font-bold mb-1">P(x) / Q(x) Ratsional kasr ko'rinishi:</span>
+          <div class="flex flex-col gap-2 w-full">
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-brand-400 font-mono w-20">Surat P(x):</span>
+              <input id="fraction_num" type="text" value="x^2 + 1" class="flex-1 bg-slate-950 border border-slate-700 px-3 py-1.5 text-white font-mono text-sm rounded-lg outline-none focus:border-brand-500">
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs text-brand-400 font-mono w-20">Maxraj Q(x):</span>
+              <input id="fraction_den" type="text" value="(x - 1)(x - 2)(x - 3)" class="flex-1 bg-slate-950 border border-slate-700 px-3 py-1.5 text-white font-mono text-sm rounded-lg outline-none focus:border-brand-500">
+            </div>
+          </div>
+          <span class="text-xs text-slate-500">Amaliy 14 namunasi: (x² + 1) / ((x - 1)(x - 2)(x - 3))</span>
+        `;
+        container.appendChild(box);
+      }
+    }
+
+    function onMatrixOpChange() {
+      const op = document.getElementById('matrix-op-select').value;
+      const bWrap = document.getElementById('matrix-b-wrap');
+      const scalarWrap = document.getElementById('scalar-input-wrap');
+      if (op === 'scalar') {
+        bWrap.classList.add('hidden');
+        scalarWrap.classList.remove('hidden');
+      } else if (op === 'transpose') {
+        bWrap.classList.add('hidden');
+        scalarWrap.classList.add('hidden');
+      } else {
+        bWrap.classList.remove('hidden');
+        scalarWrap.classList.add('hidden');
+      }
+    }
+
+    function createMatrixGridWrap(title, prefix, rows, cols) {
+      const wrap = document.createElement('div');
+      wrap.className = 'flex flex-col items-center max-w-full';
+      wrap.innerHTML = `<span class="text-xs font-semibold text-slate-400 mb-2">${title} (${rows}×${cols})</span>`;
+      
+      const scrollBox = document.createElement('div');
+      scrollBox.className = 'overflow-x-auto max-w-full p-1';
+
+      const grid = document.createElement('div');
+      grid.className = 'grid gap-1.5 p-3 bg-slate-900 border border-slate-800 rounded-xl shadow-inner';
+      grid.style.gridTemplateColumns = `repeat(${cols}, minmax(0, 1fr))`;
+
+      let inputClass = 'matrix-input';
+      if (cols >= 7) inputClass = 'matrix-input-sm';
+      else if (cols >= 5) inputClass = 'matrix-input-md';
+
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const inp = document.createElement('input');
+          inp.type = 'text';
+          inp.id = `${prefix}_${r}_${c}`;
+          inp.className = inputClass;
+          inp.value = '0';
+          grid.appendChild(inp);
+        }
+      }
+      scrollBox.appendChild(grid);
+      wrap.appendChild(scrollBox);
+      return wrap;
+    }
+
+    function createVectorGridWrap(title, prefix, length) {
+      const wrap = document.createElement('div');
+      wrap.className = 'flex flex-col items-center';
+      wrap.innerHTML = `<span class="text-xs font-semibold text-slate-400 mb-2">${title} (${length} ta)</span>`;
+      
+      const grid = document.createElement('div');
+      grid.className = 'flex flex-col gap-1.5 p-3 bg-slate-900 border border-slate-800 rounded-xl shadow-inner';
+
+      let inputClass = 'matrix-input';
+      if (length >= 7) inputClass = 'matrix-input-sm';
+      else if (length >= 5) inputClass = 'matrix-input-md';
+
+      for (let i = 0; i < length; i++) {
+        const inp = document.createElement('input');
+        inp.type = 'text';
+        inp.id = `${prefix}_${i}`;
+        inp.className = inputClass;
+        inp.value = '0';
+        grid.appendChild(inp);
+      }
+      wrap.appendChild(grid);
+      return wrap;
+    }
+
+    // Load example values
+    function loadCurrentExample() {
+      const dim = currentDim;
+      const presetGroup = PRESETS[currentTopicId];
+      if (!presetGroup) return;
+
+      let p = presetGroup[dim] || presetGroup[3] || presetGroup[2];
+
+      // 5x5 dan 10x10 gacha avtomatik chiroyli misol hosil qilish
+      if (!p || dim >= 5) {
+        if (currentTopicId === 'slae_calc' || currentTopicId === 'det_calc' || currentTopicId === 'inv_calc' || currentTopicId === 'rank_calc' || currentTopicId === 'homo_slae' || currentTopicId === 'minors_cofactors') {
+          const genA = [];
+          const genB = [];
+          for (let r = 0; r < dim; r++) {
+            const row = [];
+            for (let c = 0; c < dim; c++) {
+              if (r === c) row.push(r + 2);
+              else if (Math.abs(r - c) === 1) row.push(1);
+              else row.push(0);
+            }
+            genA.push(row);
+            genB.push((r + 1) * 2);
+          }
+          p = { A: genA, B: genB };
+        } else if (currentTopicId === 'matrix_ops' || currentTopicId === 'matrix_mult') {
+          const genA = [];
+          const genB = [];
+          for (let r = 0; r < dim; r++) {
+            genA.push(Array.from({length: dim}, (_, c) => (r === c ? 2 : (r + c) % 3)));
+            genB.push(Array.from({length: dim}, (_, c) => (r === c ? 1 : (r * c + 1) % 4)));
+          }
+          p = { A: genA, B: genB, op: 'add' };
+        }
+      }
+
+      if (!p) return;
+      if (!p) return;
+
+      if (p.A) {
+        for (let r = 0; r < p.A.length; r++) {
+          for (let c = 0; c < p.A[0].length; c++) {
+            const el = document.getElementById(`A_${r}_${c}`);
+            if (el) el.value = p.A[r][c];
+          }
+        }
+      }
+      if (p.B) {
+        if (Array.isArray(p.B[0])) {
+          for (let r = 0; r < p.B.length; r++) {
+            for (let c = 0; c < p.B[0].length; c++) {
+              const el = document.getElementById(`B_${r}_${c}`);
+              if (el) el.value = p.B[r][c];
+            }
+          }
+        } else {
+          for (let i = 0; i < p.B.length; i++) {
+            const el = document.getElementById(`B_${i}`);
+            if (el) el.value = p.B[i];
+          }
+        }
+      }
+      if (p.polyStr) {
+        const polyInp = document.getElementById('poly-input-str');
+        if (polyInp) polyInp.value = p.polyStr;
+      }
+      if (p.perm) {
+        const inp = document.getElementById('perm-input');
+        if (inp) inp.value = p.perm;
+      }
+      if (p.a1 !== undefined) {
+        const z1a = document.getElementById('z1_a'); if (z1a) z1a.value = p.a1;
+        const z1b = document.getElementById('z1_b'); if (z1b) z1b.value = p.b1;
+        const z2a = document.getElementById('z2_a'); if (z2a) z2a.value = p.a2;
+        const z2b = document.getElementById('z2_b'); if (z2b) z2b.value = p.b2;
+      }
+      if (p.power !== undefined) {
+        const ma = document.getElementById('moivre_a'); if (ma) ma.value = p.a;
+        const mb = document.getElementById('moivre_b'); if (mb) mb.value = p.b;
+        const mn = document.getElementById('moivre_n'); if (mn) mn.value = p.power;
+        const mr = document.getElementById('moivre_root_deg'); if (mr) mr.value = p.rootN;
+      }
+      if (p.f !== undefined) {
+        const pf = document.getElementById('poly_f'); if (pf) pf.value = p.f;
+        const pg = document.getElementById('poly_g'); if (pg) pg.value = p.g;
+      }
+      if (p.coeffs !== undefined && document.getElementById('horner_poly')) {
+        const hp = document.getElementById('horner_poly'); if (hp) hp.value = p.coeffs;
+        const hc = document.getElementById('horner_c'); if (hc) hc.value = p.c;
+      }
+      if (p.a !== undefined && document.getElementById('cardano_a')) {
+        const ca = document.getElementById('cardano_a'); if (ca) ca.value = p.a;
+        const cb = document.getElementById('cardano_b'); if (cb) cb.value = p.b;
+        const cc = document.getElementById('cardano_c'); if (cc) cc.value = p.c;
+        const cd = document.getElementById('cardano_d'); if (cd) cd.value = p.d;
+      }
+      if (p.a) {
+        p.a.forEach((v, i) => { const el = document.getElementById(`vec_a_${i}`); if (el) el.value = v; });
+        p.b.forEach((v, i) => { const el = document.getElementById(`vec_b_${i}`); if (el) el.value = v; });
+        p.c.forEach((v, i) => { const el = document.getElementById(`vec_c_${i}`); if (el) el.value = v; });
+      }
+    }
+
+    // Clear inputs
+    function clearCurrentInputs() {
+      document.querySelectorAll('.matrix-input, .matrix-input-md, .matrix-input-sm').forEach(inp => inp.value = '0');
+      document.getElementById('solution-container').classList.add('hidden');
+    }
+
+    // Read Matrix values from DOM
+    function readMatrix(prefix, rows, cols) {
+      const m = [];
+      for (let r = 0; r < rows; r++) {
+        const row = [];
+        for (let c = 0; c < cols; c++) {
+          const el = document.getElementById(`${prefix}_${r}_${c}`);
+          row.push(new Fraction(el ? el.value : 0));
+        }
+        m.push(row);
+      }
+      return m;
+    }
+
+    function readVector(prefix, length) {
+      const v = [];
+      for (let i = 0; i < length; i++) {
+        const el = document.getElementById(`${prefix}_${i}`);
+        v.push(new Fraction(el ? el.value : 0));
+      }
+      return v;
+    }
+
+    // Execute solution
+    function executeSolution() {
+      const dim = currentDim;
+      let solutionData = null;
+      let finalLatex = '';
+      const activeEx = getActiveExercise();
+      const exData = activeEx ? activeEx.data : null;
+
+      try {
+        if (currentTopicId === 'matrix_ops') {
+          const op = document.getElementById('matrix-op-select').value;
+          const A = readMatrix('A', dim, dim);
+          let B = null;
+          let kVal = 1;
+          if (op === 'scalar') {
+            kVal = document.getElementById('scalar-k-input').value;
+          } else if (op !== 'transpose') {
+            B = readMatrix('B', dim, dim);
+          }
+          solutionData = solveMatrixOps(A, B, op, kVal, currentMethod, exData);
+          finalLatex = solutionData.latexResult || matrixToLaTeX(solutionData.result);
+        }
+        else if (currentTopicId === 'matrix_mult') {
+          const A = readMatrix('A', dim, dim);
+          const B = readMatrix('B', dim, dim);
+          solutionData = solveMatrixOps(A, B, 'multiply', 1, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `C = ${matrixToLaTeX(solutionData.result)}`;
+        }
+        else if (currentTopicId === 'det_calc') {
+          const A = readMatrix('A', dim, dim);
+          solutionData = solveDeterminant(A, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `\\Delta = \\mathbf{${solutionData.result.toLaTeX()}}`;
+        }
+        else if (currentTopicId === 'inv_calc') {
+          const A = readMatrix('A', dim, dim);
+          solutionData = solveInverseMatrix(A, currentMethod, exData);
+          if (solutionData.latexResult) {
+            finalLatex = solutionData.latexResult;
+          } else if (solutionData.result) {
+            finalLatex = `A^{-1} = ${matrixToLaTeX(solutionData.result)}`;
+          } else {
+            finalLatex = `\\text{Teskari matritsa mavjud emas}`;
+          }
+        }
+        else if (currentTopicId === 'rank_calc') {
+          const rows = currentRows || dim;
+          const cols = currentCols || dim;
+          const A = readMatrix('A', rows, cols);
+          solutionData = solveMatrixRank(A, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `\\text{Rank}(A) = \\mathbf{${solutionData.result}}`;
+        }
+        else if (currentTopicId === 'slae_calc') {
+          const A = readMatrix('A', dim, dim);
+          const B = readVector('B', dim);
+          solutionData = solveLinearSystem(A, B, currentMethod, exData);
+          if (solutionData.latexResult) {
+            finalLatex = solutionData.latexResult;
+          } else if (solutionData.result) {
+            const rootStrs = solutionData.result.map((r, i) => `x_{${i+1}} = ${r.toLaTeX()}`).join(', \\quad ');
+            finalLatex = rootStrs;
+          } else {
+            finalLatex = `\\text{Sistema yagona yechimga ega emas}`;
+          }
+        }
+        else if (currentTopicId === 'vector_ops') {
+          const a = readVector('vec_a', 3);
+          const b = readVector('vec_b', 3);
+          const c = readVector('vec_c', 3);
+
+          let op = 'dot';
+          if (currentMethod.toLowerCase().includes('vektor')) op = 'cross';
+          if (currentMethod.toLowerCase().includes('aralash')) op = 'mixed';
+
+          solutionData = solveVectors(a, b, c, op);
+          if (op === 'dot') finalLatex = `\\vec{a} \\cdot \\vec{b} = \\mathbf{${solutionData.result.toLaTeX()}}`;
+          else if (op === 'cross') finalLatex = `\\vec{a} \\times \\vec{b} = \\mathbf{(${solutionData.result[0].toLaTeX()}, ${solutionData.result[1].toLaTeX()}, ${solutionData.result[2].toLaTeX()})}`;
+          else finalLatex = `(\\vec{a}, \\vec{b}, \\vec{c}) = \\mathbf{${solutionData.result.toLaTeX()}}`;
+        }
+        else if (currentTopicId === 'matrix_aat') {
+          const cols = dim === 2 ? 4 : dim;
+          const A = readMatrix('A', dim, cols);
+          solutionData = solveAAt(A);
+          finalLatex = `A \\cdot A^T = ${matrixToLaTeX(solutionData.result)}`;
+        }
+        else if (currentTopicId === 'matrix_poly') {
+          const A = readMatrix('A', dim, dim);
+          const polyStr = document.getElementById('poly-input-str').value.trim();
+          let coeffs = [1, 0, -2, 1]; // default x^3 - 2x^2 + 1
+          if (dim === 2) coeffs = [-2, -5, 1]; // x^2 - 5x - 2
+          solutionData = solveMatrixPolynomial(A, polyStr, coeffs);
+          finalLatex = `f(A) = ${matrixToLaTeX(solutionData.result)}`;
+        }
+        else if (currentTopicId === 'eigen_calc') {
+          const A = readMatrix('A', 2, 2);
+          solutionData = solveEigen2x2(A);
+          if (solutionData.result) {
+            finalLatex = `\\lambda_1 = ${solutionData.result[0]}, \\quad \\lambda_2 = ${solutionData.result[1]}`;
+          } else {
+            finalLatex = `\\text{Haqiqiy xos sonlar mavjud emas}`;
+          }
+        }
+        else if (currentTopicId === 'perm_inversions') {
+          const raw = document.getElementById('perm-input').value.trim().split(/\s+/).map(Number);
+          solutionData = solvePermutations(raw, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `I(\\sigma) = \\mathbf{${solutionData.result.count}}, \\quad \\text{sgn}(\\sigma) = \\mathbf{${solutionData.result.sgn > 0 ? '+1' : '-1'}}`;
+        }
+        else if (currentTopicId === 'minors_cofactors') {
+          const A = readMatrix('A', dim, dim);
+          const selRow = parseInt(document.getElementById('minors-row-select').value, 10) || 0;
+          solutionData = solveMinorsAndCofactors(A, selRow);
+          finalLatex = `\\det(A) = \\mathbf{${solutionData.result.toLaTeX()}}`;
+        }
+        else if (currentTopicId === 'homo_slae') {
+          const A = readMatrix('A', dim, dim);
+          solutionData = solveHomogeneousSLAE(A, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `\\text{FYeT bazisi va umumiy yechim topildi}`;
+        }
+        else if (currentTopicId === 'complex_ops') {
+          const a1 = parseFloat(document.getElementById('z1_a').value) || 0;
+          const b1 = parseFloat(document.getElementById('z1_b').value) || 0;
+          const a2 = parseFloat(document.getElementById('z2_a').value) || 0;
+          const b2 = parseFloat(document.getElementById('z2_b').value) || 0;
+          solutionData = solveComplexOps(a1, b1, a2, b2, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `z_1 \\cdot z_2 = \\mathbf{${solutionData.result}}`;
+        }
+        else if (currentTopicId === 'demoivre_calc') {
+          const a = parseFloat(document.getElementById('moivre_a').value) || 0;
+          const b = parseFloat(document.getElementById('moivre_b').value) || 0;
+          const pwr = parseInt(document.getElementById('moivre_n').value, 10) || 1;
+          const rDeg = parseInt(document.getElementById('moivre_root_deg').value, 10) || 3;
+          solutionData = solveDeMoivre(a, b, pwr, rDeg, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `z^{${pwr}} \\text{ hisoblandi va ${rDeg} ta ildiz topildi}`;
+        }
+        else if (currentTopicId === 'poly_gcd') {
+          const f = document.getElementById('poly_f').value.trim().split(/\s+/).map(Number);
+          const g = document.getElementById('poly_g').value.trim().split(/\s+/).map(Number);
+          solutionData = solvePolynomialGCD(f, g, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `\\text{EKUB}(f, g) = ${solutionData.result.gcd}`;
+        }
+        else if (currentTopicId === 'poly_div') {
+          const f = document.getElementById('poly_f').value.trim().split(/\s+/).map(Number);
+          const g = document.getElementById('poly_g').value.trim().split(/\s+/).map(Number);
+          solutionData = solvePolynomialDivision(f, g, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `q(x) = ${solutionData.result.q}, \\quad r(x) = ${solutionData.result.r}`;
+        }
+        else if (currentTopicId === 'horner_scheme') {
+          const coeffs = document.getElementById('horner_poly').value.trim().split(/\s+/).map(Number);
+          const c = parseFloat(document.getElementById('horner_c').value) || 0;
+          solutionData = solveHornerScheme(coeffs, c, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `f(${c}) = \\mathbf{${solutionData.result.r.toLaTeX()}}`;
+        }
+        else if (currentTopicId === 'cardano_cubic') {
+          const a = parseFloat(document.getElementById('cardano_a').value) || 1;
+          const b = parseFloat(document.getElementById('cardano_b').value) || 0;
+          const c = parseFloat(document.getElementById('cardano_c').value) || 0;
+          const d = parseFloat(document.getElementById('cardano_d').value) || 0;
+          solutionData = solveCardanoCubic(a, b, c, d, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `x_1 = \\mathbf{${solutionData.result[0].toFixed(3)}}`;
+        }
+        else if (currentTopicId === 'partial_fractions') {
+          const num = document.getElementById('fraction_num') ? document.getElementById('fraction_num').value.trim() : 'x^2 + 1';
+          const den = document.getElementById('fraction_den') ? document.getElementById('fraction_den').value.trim() : '(x - 1)(x - 2)(x - 3)';
+          solutionData = solvePartialFractions(num, den, currentMethod, exData);
+          finalLatex = solutionData.latexResult || `\\text{Kasr sodda kasrlarga ajratildi}`;
+        }
+
+        renderSolution(solutionData, finalLatex);
+      } catch (err) {
+        alert("Hisoblashda xatolik yuz berdi: " + err.message);
+        console.error(err);
+      }
+    }
+
+    function renderSolution(solution, finalLatex) {
+      const container = document.getElementById('solution-container');
+      const stepsList = document.getElementById('steps-list');
+      const finalDiv = document.getElementById('final-result-latex');
+
+      finalDiv.innerHTML = `$$${finalLatex}$$`;
+      stepsList.innerHTML = '';
+
+      solution.steps.forEach((st, idx) => {
+        const card = document.createElement('div');
+        card.className = 'step-card p-5 rounded-2xl bg-slate-950 border border-slate-800 shadow-md transition hover:border-slate-700';
+        const formattedDesc = st.desc
+          ? st.desc.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-semibold">$1</strong>')
+          : '';
+        card.innerHTML = `
+          <div class="flex items-center gap-2 mb-2">
+            <span class="w-6 h-6 rounded-lg bg-brand-600/20 text-brand-400 font-bold text-xs flex items-center justify-center border border-brand-500/30">
+              ${idx + 1}
+            </span>
+            <h4 class="font-bold text-white text-base">${st.title}</h4>
+          </div>
+          ${st.desc ? `<div class="text-sm text-slate-300 mb-3 whitespace-pre-line leading-relaxed">${formattedDesc}</div>` : ''}
+          <div class="p-3 bg-slate-900 rounded-xl overflow-x-auto border border-slate-800/80 text-center">
+            $$${st.latex}$$
+          </div>
+        `;
+        stepsList.appendChild(card);
+      });
+
+      container.classList.remove('hidden');
+      document.getElementById('solution-timestamp').textContent = new Date().toLocaleTimeString();
+
+      // Render KaTeX
+      if (window.renderMathInElement) {
+        renderMathInElement(container, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false}
+          ],
+          throwOnError: false
+        });
+      }
+
+      // Smooth scroll to solution
+      container.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Syllabus Modal
+    function showSyllabusModal() {
+      const modal = document.getElementById('syllabus-modal');
+      const content = document.getElementById('syllabus-content');
+      content.innerHTML = '';
+
+      const data = syllabusData || (typeof SYLLABUS_DATA !== 'undefined' ? SYLLABUS_DATA : null);
+      if (data && data.categories) {
+        data.categories.forEach(cat => {
+          const catDiv = document.createElement('div');
+          catDiv.className = 'p-4 rounded-xl bg-slate-950 border border-slate-800 shadow-sm';
+          catDiv.innerHTML = `
+            <div class="flex items-center justify-between mb-2.5 pb-2 border-b border-slate-800/80">
+              <h4 class="font-bold text-indigo-400 text-sm flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+                ${cat.title}
+              </h4>
+              <span class="text-[11px] text-slate-400 font-mono">${cat.topics.length} ta mavzu</span>
+            </div>
+            <ul class="space-y-2 text-xs text-slate-300">
+              ${cat.topics.map(t => `
+                <li class="p-3 rounded-lg bg-slate-900 border border-slate-800 flex flex-col gap-1.5 transition hover:border-slate-700">
+                  <div class="flex items-center justify-between">
+                    <span class="font-semibold text-white text-sm">${t.name}</span>
+                    <button onclick="hideSyllabusModal(); selectTopic('${t.id}')" class="px-2.5 py-1 rounded bg-brand-600/20 text-brand-300 hover:bg-brand-600 hover:text-white border border-brand-500/30 text-xs font-medium transition">
+                      Mavzuni ochish →
+                    </button>
+                  </div>
+                  <span class="text-slate-400">${t.desc}</span>
+                  <div class="flex flex-wrap gap-1.5 mt-1">
+                    <span class="text-[11px] text-slate-500 mr-1 self-center">Yechish usullari:</span>
+                    ${t.methods.map(m => `<span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 text-[11px] font-medium">${m}</span>`).join('')}
+                  </div>
+                </li>
+              `).join('')}
+            </ul>
+          `;
+          content.appendChild(catDiv);
+        });
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function hideSyllabusModal() {
+      document.getElementById('syllabus-modal').classList.add('hidden');
+    }
+
+    // Auto-init on page load
+    window.addEventListener('DOMContentLoaded', initApp);
+  </script>
+</body>
+</html>

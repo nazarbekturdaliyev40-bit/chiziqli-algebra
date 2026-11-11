@@ -1,0 +1,194 @@
+
+=== PAGE 1 ===
+3.3.1 Mustagqil ishlash uchun misol va masalalar
+
+1. 2-tartibli determinantlarni hisoblang:
+
+5 2 172 32
+2 [53 [si] 9 |5i
+
+6 9 a? ab n+l n
+9513) 9 Ar Rl Brees
+
+CkaHupoBaHo ¢ CamScanner
+
+=== PAGE 2 ===
+2. 2-tartibli determinantlarni hisoblang;
+
+a? +ab+b® a? — gb 4 p2
+
+—b
+0) a+b a I )
+
+a—b a+b a+b a—b )
+sina cosa cosa —sina
+
+°) sinf cosf |’ ) sina cosa |’
+
+n cos sina 1) sina + sin 8 cos ff + cosa
+sin cosfB cos B — cosa sina —singf |°
+
+3. 3-tartibli determinantlarni hisoblang:
+
+2.1.3 321 4-3 5
+a)[532|, b)|253|, ¢|3-2 8
+143 342 1-7 —%
+3 9:4 3 4-5 42-1
+d)41 2,8 7-2|,1|53 2],
+5.0.23 2-1 8 32-1
+111 011 563
+g|t23|, mlro1|, |o1o],
+136 110 1745
+203 1525 111
+D7rel, K|174], Df 4 5 9].
+605 1864 16 25 81
+
+4. Quyidagi ifodalarning qaysi biri determinantning hadi bo'la oladi:
+
+a) 04,302,1043,501,205 4, b) a6,102,304,503 601,2054,
+c) 02,703,605,107,402 504,306 2, d) a3 301 607,202,75,506,104,4
+e) 01,2023... An—1,70n, 1, f) 012021034043 - - - 2n—1,2002n,20-1"
+
+!
+
+(3 0620:503,30k 404601 ko'paytma 6-tartibli determinantda manfiy
+* ishora bilan gatnashadigan ¢ va k larning qiymatlarini tanlang.
+
+04,706,301 105,507 £02,403 1 ko'paytma 7-tartibli determinantda musbat
+ishora bilan qatnashadigan 4 va k larning qiymatlarini tanlang.
+
+CkaHupoBaHo ¢ CamScanner
+
+=== PAGE 3 ===
+I 4-tartibli determinantning a, elementni o'z ichiga oladigan va mus-
+bat ishora bilan qatnashadigan hadlarini toping.
+
+8. Quyidagi determinantning z4 va 2% birhadlari koeffitsiyentlarini
+aniglang:
+
+5c 1 2 3
+
+2x4 2
+
+12z 3
+
+z 12 22
+9. Determinantlarni hisoblang:
+
+Talat 0111 9. =5i109
+IRE 1011 ITE A
+2) ee RU) A IN s-9 27|
+IESE Te 1110 4-6 112
+oY ify 3-3-58 9-5 43
+BERT Sg 3-246 3-4 75
+Diy 5-3 20"92-5 75" D| 4-9 gs)
+Fiig =4 5 4-48-56 3 9-53
+3.3 _92 5 35-22 3-5 2-4
+25 4 6) pf-4 7 44) 1-3 4-5 3
+85 5 8 7) 4-9-3775 7-7 5
+Tx EE) 8-8 5-6
+
+4 5
+32292 16 307 or
+ee oi el D|3 5111621].
+5-85 8 5435 oe A A Bl)
+6-54 7 opi ge 1 45 310
+
+10. Elementlari a; j = min(i, j) shartni ganoatlantiruvchi n-tartibli de-
+terminantni hisoblang.
+
+CkaHupoBaHo ¢ CamScanner
+
+=== PAGE 4 ===
+11. Elementlari a; j = ma®
+terminantni hisoblang.
+
+(4,5) shartni qanoatlantiruvchj oy :
+b-
+
+12. Quyidagi determinantlarni uchburchak ko‘rinishga keltirip, hisoblag
+g:
+
+1 2 3... mn
+-1 0 3... n
+a)[-1-2 0. n
+-1 -2 -3. 0
+Ty G12 413 ... Qn
+T1 Tp G3 ... Q2p
+c) Ty To T3 ... Q3p
+Ty Ty T3 ... Tp
+3 2 2. 2
+2 3 2. 2
+©) Senay )
+2 2 2. 3
+1 nn. n
+gl nn 3. nl,
+a b... bb
+b a b b
+bb... a
+b b.. b a
+
+yb)
+
+)
+
+1 2 3...n-9 n-1 ,
+2 3 4...n-1 4 k
+34 5..n go
+1 1 1 |
+ay a; a —b a
+az as — by ap ol,
+an = bn an an an
+ag ay a . an
+-z x 0... 0
+0-1 zx. 0f,
+0 0 0... z
+1 zz? zn
+a; 1 =z gl
+a1 agp 1 a2,
+an2 Qn2 Qng3 1
+1 1. 1 —n
+1 1...-n-n
+1 —n . 1
+-n 1. 1 1
+
+CkaHupoBaHo ¢ CamScanner
+
+=== PAGE 5 ===
+3.4. MINORLAR VA ALGEBRAIK TO‘LDIRUVCHILAR mm
+
+I=]
+—
+Q
+[3
+j=}
+3)
+I=}
+3S
+—
+
+ai ag ces an
+
+—z; x2 0 0 1 a+b; a2 a an
+
+k) 0 —x9 z3 01, 1) 1 a ag+by ... an
+0 0 0 Ti 1 ax ay... a+b,
+
+13. Quyidagi determinantlarni chizigli ko‘paytuvchilarga ajratish usuli-
+dan foydalanib hisoblang:
+
+fr 1 2 3 1
+
++z 1 1 1
+12-222 3 1 1—-z 1 1
+212 3 1 5 |" D1 1 1+ i
+z 1
+2 3 19-7? 1 1 1 1-2
+ap a; az ... Qn ae b >
+a T ay ... an
+a —z c¢ b
+c)|la a © ... an |, d) b ec -z a
+c b a -x
+a a a ... T
+
+CkaHupoBaHo ¢ CamScanner

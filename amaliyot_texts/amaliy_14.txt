@@ -1,0 +1,170 @@
+
+=== PAGE 1 ===
+5.4. RATSIONAL KASRLAR 179
+b) 9(z) = ang" + an12" +--+ ag;
+¢) g(x) = az" + a1bz™! + agh’z"? + + + - + ap".
+19. Agar B ratsional soni butun koeffitsientli
+f(z) = apz" + a1z" +--+ an
+ko‘phadning ildizi bo'lsa, u holda g soni aq koeffitsientning, p soni
+esa a, koeffitsientning bo‘luvchisi ekanligini isbotlang.
+20. Ko‘phadning ratsional ildizlarini toping:
+
+a) 7° — 62% + 152 — 14;
+
+b) z4 — 22% — 82% + 13z — 24;
+
+c) 24z* — 4223 — 772% + 56x + 60;
+
+d) 2° — 72% — 122? + 62 + 36;
+
+e) 2425 + 10z* — 2° — 192% — 5 + 6;
+
+f) 28 — 625 4 112% — 2° — 182% + 202 — 8.
+
+5.4 Ratsional kasrlar
+
+Ushbu mavzuda haqiqiy yoki kompleks sonlar maydoni ustida berilgan
+ratsional kasrlar haqida gap boradi. Biror maydon ustida berilgan f(z)
+va g(z) # 0 ko'phadlarning ES nisbatiga ratsional kasrli funksiya yoki
+qisqacha ratsional kasr deyiladi.
+5.4.1-ta’rif. Agar hi va fh ratsional kasrlar uchun fi(z)ga(z) =
+fo(z)g1(z) tenglik o'rinli bo‘lsa, u holda bu ratsional kasrlar teng
+deyiladi.
+Masalan, ZL; va 5; ratsional kasrlar tengdir.
+Ratsional kasrlar to‘plamida qo'shish va ko'paytirish amallarini
+quyidagicha aniglaymiz:
+fiw) | fo@) _ [i(z)gx(z) + fo(z)gi(z)
+(2) g(z) 91(z) - 92x)
+
+
+=== PAGE 2 ===
+180 BOB 5. KO'PHADLAR
+
+Berilgan fg ratsional kasrda har doim EKUB(f(z), g(z)) = 1 deb
+olishimiz mumkin. Chunki, EKUB(f(z), 9(z)) = d(z) bo'lsa, u holda
+f(@) = d(x) - fi(z) va g(x) = d(z) - 9:(z) ekanligidan LZ = 22 kelib
+chiqadi, bu yerda EKUB( f(z), g1(z)) = 1.
+
+Bunday kasrlarga normallashgan kasrlar deb ataladi.
+
+5.4.2-ta’rif. Agar 4 ratsional kasrda deg f < deg g bo‘lsa, u holda
+
+u to'g‘ri ratsional kasr, aks holda noto‘g‘ri ratsional kasr deyiladi.
+5.4.1-tasdiq. Har ganday ratsional kasr ko‘phad va to‘q‘ri ratsional
+kasrlarning yig‘indisi ko ‘rinishida ifodalanadi.
+
+Isbot. Agar el to'g'ri ratsional kasr bo'lsa, teorema o'rinli ekanligi
+ravshan.
+
+Faraz qilaylik, a noto'g'ri ratsional kasr bo‘lsin. U holda f(z)
+
+ko'phadni g(z) ga qoldigli bo'lib,
+
+f(@) = g(z)- 9z) + r(x), degr <degg
+tenglikni hosil gilamiz, bundan esa,
+
+f(z) _ gz) - ql) + r(x) r(z)
+
+= =q(z) +
+
+o@) d@ rE
+
+kelib chigadi. o
+
+5.4.2-tasdiq. To‘g‘ri ratsional kasrlarning yig‘indisi va ko ‘paytmasi
+to‘q‘ri ratsional kasr bo‘ladi.
+
+Isbot. Hagiqatan ham, agar £42! va Az) to'g'ri ratsional kasrlar
+
+a(x) 9(z)
+bo'lsa,
+fiz) | fo@) _ Siz) ga(2) + fol) 92(2)
+az) gz) 91(2) - 92(2)
+
+to‘g'ri ratsional kasr bo‘ladi, chunki
+deg(fr- 92+ f2- 91) < deg(g1- 92).
+
+=== PAGE 3 ===
+184 BOB 5. KO'PHADLAR
+
+5.4.1 Mustaqil ishlash uchun misol va masalalar
+
+1. Quyidagi ratsional kasrlarni kompleks sonlar maydonida sodda kasr-
+larga yoying:
+
+12 .
+a) EGEAE) b) & verry ©) #om
+d) = EEE DIF =¢ f) siz
+6-23 1
+8) | t= por 2) h) = my: i) =r
+
+2. Quyidagi ratsional kasrlarni hagigiy sonlar maydonida sodda kasr-
+larga yoying:
+22 .
+Va Wm 9s
+dm © Te iD) Hi ,
+8) =n h) EAE i) Frey rey. 8
+
+3. Quyidagi ratsional kasrlarni kompleks sonlar maydonida sodda kasr-
+larga yoying:
+
+a) 3 b) n! ‘ ¢) (2n)!
+ey i Cl z(z2-1)(z2-4).. nd)
+dm ©) arama f) sma
+
+8) whip h) gi 0) ea
+
+4. Quyidagi ratsional kasrlarni haqgiqiy sonlar maydonida sodda kasr-
+larga yoying:
+a) 7 A —i b) ET c) =
+d) = e) ErmsyE mea f) Ems
+
+5. 2),72 va z3 sonlari f(z) ko'phadning ildizlari bo‘lsa, quyidagi
+yig‘indilarni hisoblang:
+0) ph +l + ak bo yor £6) = = 3a
+
+bu yerda f(z) = 2° +2? —4z +1;
+
+b) {- tt z3- se
+©) gayi * Fret gran buverda f(z) =a” +271.
+
+=== PAGE 4 ===
+5.5. UCHINCHI VA TO'RTINCHI DARAJALI ALGEBRAIK TENGLAMALARNI YECHISH185
+
+6. Quyidagi ko‘phadlarni ratsional sonlar maydoni ustida keltirilmas
+ekanligini isbotlang:
+a) z' — 82% + 1222 — 6z + 2;
+b) 2° — 1223 + 36z — 12;
+c) zt — 23+ 2x +1.
+
+5.5 Uchinchi va to‘rtinchi darajali algebraik tenglamalarni
+yechish
+
+Ushbu mavzuda uchinchi va to'rtinchi darajali tenglamalarni yechish
+usullarini keltiramiz. Dastlab, uchinchi darajali tenglamani qaraymiz.
+Ma’'lumki, uchinchi darajali tenglamalarning umumiy ko'rinishi
+quyidagicha bo'ladi:
+
+aor’ + a7? + apx +a3=0.
+
+Bu tenglamaning koeffitsientlari kompleks sonlardan iborat bo'lib,
+tenglamani kompleks yechimlarini topish masalasini qaraymiz. Umu-
+miylikka ziyon yetkazmagan holda, ag = 1 deb olish mumkin. z = y—%
+kabi almashtirish bajarib, teglamani quyidagi ko'rinishga keltirib olamiz:
+
+a a2 a
+w-3 +al-3) +al-73)+a=0.
+Ushbu tenglamaning qavslarini ochib, o'xshash hadlarini ixchamlasak:
+
+a} a 2
+V4 (a= Fy + (a= 5 + ral) =0
+
+Endip =a; — 4, q = a3 — 2 + £a} belgilashlarni kiritsak, berilgan
+tenglama quyidagi ko'rinishga keladi:
+
+P+py+g=0.
+
+Demak, 3-darajali tenglamani yechish masalasi yuqoridagi tenglamani
+yechishga keltirildi. Ushbu tenglamada y = a + § deb olsak,
+
+o®+3a%B +3af? + f° +pla+B)+q=0,
